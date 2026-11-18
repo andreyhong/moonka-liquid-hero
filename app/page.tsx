@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SculptureHero from "@/components/ui/liquid-sculpture-hero";
+import CraftCards from "@/components/craft-cards";
 
 export default function Home() {
   return (
@@ -60,35 +61,47 @@ export default function Home() {
             {/* Clickable Card Body */}
             <Link
               href="/projects/island-rituals/"
-              className="block cursor-pointer focus:outline-none"
+              className="block cursor-pointer focus:outline-none flex-1"
               title="Buka galeri lengkap karya Island Rituals"
             >
-              <div className="h-60 sm:h-72 rounded-xl relative overflow-hidden flex flex-col justify-between p-5 md:p-6 border border-white/10">
+              <div className="h-60 sm:h-72 rounded-xl relative overflow-hidden border border-white/10 group-hover:border-[#d4af37]/40 transition-colors">
                 <img
                   src="/projects/island-rituals.jpg"
                   alt="Island Rituals AI UGC Video"
-                  className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 group-hover:scale-105 transition-all duration-700 pointer-events-none"
+                  className="w-full h-full object-cover opacity-100 group-hover:scale-105 transition-transform duration-700 pointer-events-none"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-black/30 pointer-events-none" />
-                <span className="relative z-10 text-xs tracking-widest uppercase text-white/80 font-mono px-2.5 py-1 rounded bg-black/60 backdrop-blur-sm self-start border border-white/10">
-                  EXPERTISE 01
-                </span>
-                <div className="relative z-10">
-                  <h3 className="text-xl md:text-2xl font-serif text-white mb-1 group-hover:text-[#d4af37] transition-colors">
-                    AI UGC &amp; Video Ads
-                  </h3>
-                  <p className="text-xs text-zinc-300">Google Flow &middot; Veo &middot; Nano Banana &middot; CapCut</p>
+                <div className="absolute top-3.5 left-3.5 z-10">
+                  <span className="text-[11px] tracking-widest uppercase text-white/90 font-mono px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md border border-white/15 shadow-sm">
+                    EXPERTISE 01
+                  </span>
                 </div>
               </div>
-              <div className="mt-5 md:mt-6">
-                <p className="text-xs text-zinc-400 leading-relaxed font-light">
-                  Pembuatan video iklan bergaya UGC organik (9:16) untuk Island Rituals Nail Serum. Mengubah product brief menjadi video berkonversi tinggi melalui concept prompting, digital talent avatar, POV demo produk, dan audio sync.
-                </p>
+
+              <div className="mt-5">
+                <h3 className="text-xl md:text-2xl font-serif text-white mb-1.5 group-hover:text-[#d4af37] transition-colors">
+                  AI UGC &amp; Video Ads
+                </h3>
+                <p className="text-xs text-[#d4af37]/90 font-mono">Google Flow &middot; Veo &middot; Nano Banana &middot; CapCut</p>
               </div>
+
+              <ul className="mt-4 space-y-2 text-xs text-zinc-300 font-light leading-relaxed">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#d4af37] text-[10px] mt-0.5 flex-shrink-0">◆</span>
+                  <span>Pembuatan video iklan bergaya UGC organik (9:16) untuk Island Rituals Nail Serum.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#d4af37] text-[10px] mt-0.5 flex-shrink-0">◆</span>
+                  <span>Mengubah product brief menjadi video berkonversi tinggi via concept prompting &amp; digital avatar.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#d4af37] text-[10px] mt-0.5 flex-shrink-0">◆</span>
+                  <span>POV demo produk nyata dengan visual photorealistic dan sinkronisasi audio presisi.</span>
+                </li>
+              </ul>
             </Link>
 
             {/* Bottom Row */}
-            <div className="flex flex-wrap items-center justify-between pt-4 mt-4 border-t border-white/5 gap-2">
+            <div className="flex flex-wrap items-center justify-between pt-4 mt-5 border-t border-white/5 gap-2">
               <Link
                 href="/projects/island-rituals/"
                 className="flex flex-col group/link"
@@ -116,35 +129,47 @@ export default function Home() {
             {/* Clickable Card Body */}
             <Link
               href="/projects/ecommerce-ads/"
-              className="block cursor-pointer focus:outline-none"
+              className="block cursor-pointer focus:outline-none flex-1"
               title="Buka galeri lengkap karya Aussie Sawit dan Howell Niaga"
             >
-              <div className="h-60 sm:h-72 rounded-xl relative overflow-hidden flex flex-col justify-between p-5 md:p-6 border border-white/10">
+              <div className="h-60 sm:h-72 rounded-xl relative overflow-hidden border border-white/10 group-hover:border-[#d4af37]/40 transition-colors">
                 <img
                   src="/projects/aussie-sawit.jpg"
                   alt="Aussie Sawit & Howell Niaga E-Commerce Ads"
-                  className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 group-hover:scale-105 transition-all duration-700 pointer-events-none"
+                  className="w-full h-full object-cover opacity-100 group-hover:scale-105 transition-transform duration-700 pointer-events-none"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-black/30 pointer-events-none" />
-                <span className="relative z-10 text-xs tracking-widest uppercase text-white/80 font-mono px-2.5 py-1 rounded bg-black/60 backdrop-blur-sm self-start border border-white/10">
-                  EXPERTISE 02
-                </span>
-                <div className="relative z-10">
-                  <h3 className="text-xl md:text-2xl font-serif text-white mb-1 group-hover:text-[#d4af37] transition-colors">
-                    E-Commerce &amp; Commercial Ads
-                  </h3>
-                  <p className="text-xs text-zinc-300">ChatGPT Image &middot; Midjourney &middot; Photoshop &middot; Illustrator</p>
+                <div className="absolute top-3.5 left-3.5 z-10">
+                  <span className="text-[11px] tracking-widest uppercase text-white/90 font-mono px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md border border-white/15 shadow-sm">
+                    EXPERTISE 02
+                  </span>
                 </div>
               </div>
-              <div className="mt-5 md:mt-6">
-                <p className="text-xs text-zinc-400 leading-relaxed font-light">
-                  Produksi visual etalase toko online (Shopee/Tokopedia Store Decoration) &amp; creative ads media sosial berkonversi tinggi untuk sektor agrikultur perkebunan (Aussie Sawit) dan elektronik (Howell Niaga).
-                </p>
+
+              <div className="mt-5">
+                <h3 className="text-xl md:text-2xl font-serif text-white mb-1.5 group-hover:text-[#d4af37] transition-colors">
+                  E-Commerce &amp; Commercial Ads
+                </h3>
+                <p className="text-xs text-[#d4af37]/90 font-mono">ChatGPT Image &middot; Midjourney &middot; Photoshop &middot; Illustrator</p>
               </div>
+
+              <ul className="mt-4 space-y-2 text-xs text-zinc-300 font-light leading-relaxed">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#d4af37] text-[10px] mt-0.5 flex-shrink-0">◆</span>
+                  <span>Produksi visual etalase toko online (Shopee/Tokopedia Store Decoration).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#d4af37] text-[10px] mt-0.5 flex-shrink-0">◆</span>
+                  <span>Creative ads media sosial berkonversi tinggi untuk sektor agrikultur perkebunan (Aussie Sawit).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#d4af37] text-[10px] mt-0.5 flex-shrink-0">◆</span>
+                  <span>Komposisi produk AI, mockup komersial, dan banner kampanye promosi elektronik (Howell Niaga).</span>
+                </li>
+              </ul>
             </Link>
 
             {/* Bottom Row */}
-            <div className="flex flex-wrap items-center justify-between pt-4 mt-4 border-t border-white/5 gap-2">
+            <div className="flex flex-wrap items-center justify-between pt-4 mt-5 border-t border-white/5 gap-2">
               <Link
                 href="/projects/ecommerce-ads/"
                 className="flex flex-col group/link"
@@ -172,35 +197,47 @@ export default function Home() {
             {/* Clickable Card Body */}
             <Link
               href="/projects/blue-sportswear/"
-              className="block cursor-pointer focus:outline-none"
+              className="block cursor-pointer focus:outline-none flex-1"
               title="Buka galeri lengkap karya Blue Sportswear"
             >
-              <div className="h-60 sm:h-72 rounded-xl relative overflow-hidden flex flex-col justify-between p-5 md:p-6 border border-white/10">
+              <div className="h-60 sm:h-72 rounded-xl relative overflow-hidden border border-white/10 group-hover:border-[#d4af37]/40 transition-colors">
                 <img
                   src="/projects/blue-sportswear.jpg"
                   alt="Blue Sportswear Denmark AI Fashion Reels"
-                  className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 group-hover:scale-105 transition-all duration-700 pointer-events-none"
+                  className="w-full h-full object-cover opacity-100 group-hover:scale-105 transition-transform duration-700 pointer-events-none"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-black/30 pointer-events-none" />
-                <span className="relative z-10 text-xs tracking-widest uppercase text-white/80 font-mono px-2.5 py-1 rounded bg-black/60 backdrop-blur-sm self-start border border-white/10">
-                  EXPERTISE 03
-                </span>
-                <div className="relative z-10">
-                  <h3 className="text-xl md:text-2xl font-serif text-white mb-1 group-hover:text-[#d4af37] transition-colors">
-                    AI Fashion &amp; Commercial Reels
-                  </h3>
-                  <p className="text-xs text-zinc-300">Midjourney &middot; Veo &middot; Google Flow &middot; Premiere Pro</p>
+                <div className="absolute top-3.5 left-3.5 z-10">
+                  <span className="text-[11px] tracking-widest uppercase text-white/90 font-mono px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md border border-white/15 shadow-sm">
+                    EXPERTISE 03
+                  </span>
                 </div>
               </div>
-              <div className="mt-5 md:mt-6">
-                <p className="text-xs text-zinc-400 leading-relaxed font-light">
-                  Pembuatan video reels kampanye mode dan visual lookbook activewear/knitwear untuk brand busana Blue Sportswear (Denmark). Menerapkan konsistensi model AI di set multi-lokasi (Paris, Courchevel, Analog Nature) dengan pencahayaan sinematik.
-                </p>
+
+              <div className="mt-5">
+                <h3 className="text-xl md:text-2xl font-serif text-white mb-1.5 group-hover:text-[#d4af37] transition-colors">
+                  AI Fashion &amp; Commercial Reels
+                </h3>
+                <p className="text-xs text-[#d4af37]/90 font-mono">Midjourney &middot; Veo &middot; Google Flow &middot; Premiere Pro</p>
               </div>
+
+              <ul className="mt-4 space-y-2 text-xs text-zinc-300 font-light leading-relaxed">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#d4af37] text-[10px] mt-0.5 flex-shrink-0">◆</span>
+                  <span>Pembuatan video reels kampanye mode &amp; visual lookbook busana brand Blue Sportswear (Denmark).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#d4af37] text-[10px] mt-0.5 flex-shrink-0">◆</span>
+                  <span>Menerapkan konsistensi model AI di set multi-lokasi (Paris, Courchevel, Analog Nature).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#d4af37] text-[10px] mt-0.5 flex-shrink-0">◆</span>
+                  <span>Pencahayaan sinematik dengan visual photorealistic dan color grading kelas editorial.</span>
+                </li>
+              </ul>
             </Link>
 
             {/* Bottom Row */}
-            <div className="flex flex-wrap items-center justify-between pt-4 mt-4 border-t border-white/5 gap-2">
+            <div className="flex flex-wrap items-center justify-between pt-4 mt-5 border-t border-white/5 gap-2">
               <Link
                 href="/projects/blue-sportswear/"
                 className="flex flex-col group/link"
@@ -240,29 +277,8 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          <div className="p-6 md:p-8 rounded-2xl bg-white/[0.02] border border-white/10">
-            <span className="text-2xl md:text-3xl font-serif text-[#d4af37] block mb-3 md:mb-4">01</span>
-            <h4 className="text-base md:text-lg font-medium text-white mb-2">Prompt &amp; Lighting Engineering</h4>
-            <p className="text-xs md:text-sm text-zinc-400 leading-relaxed font-light">
-              Penguasaan parameter teknis pencahayaan (cinematic rim light, soft studio fill, golden hour) dan komposisi sudut kamera untuk visual photorealistic.
-            </p>
-          </div>
-          <div className="p-6 md:p-8 rounded-2xl bg-white/[0.02] border border-white/10">
-            <span className="text-2xl md:text-3xl font-serif text-[#d4af37] block mb-3 md:mb-4">02</span>
-            <h4 className="text-base md:text-lg font-medium text-white mb-2">Character &amp; Product Consistency</h4>
-            <p className="text-xs md:text-sm text-zinc-400 leading-relaxed font-light">
-              Teknik multi-angle seed locking dan pose sequencing agar wajah model AI dan detail produk fisik tetap identik di seluruh scene iklan.
-            </p>
-          </div>
-          <div className="p-6 md:p-8 rounded-2xl bg-white/[0.02] border border-white/10">
-            <span className="text-2xl md:text-3xl font-serif text-[#d4af37] block mb-3 md:mb-4">03</span>
-            <h4 className="text-base md:text-lg font-medium text-white mb-2">Commercial-Ready Delivery</h4>
-            <p className="text-xs md:text-sm text-zinc-400 leading-relaxed font-light">
-              Telah memproduksi 120+ aset visual di sektor F&amp;B, beauty, fashion, dan e-commerce dengan standar rasio iklan digital (1:1, 9:16, 16:9).
-            </p>
-          </div>
-        </div>
+        {/* 3 Interactive Cards with Pop-up Modal */}
+        <CraftCards />
       </section>
 
       {/* Section #bespoke: Collaboration & Contact */}
