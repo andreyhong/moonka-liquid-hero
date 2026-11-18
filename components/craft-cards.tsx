@@ -152,9 +152,11 @@ export default function CraftCards() {
                 setActiveItem(item);
               }
             }}
-            className="group relative p-6 md:p-8 rounded-2xl bg-white/[0.025] border border-white/10 hover:border-[#d4af37]/60 hover:bg-white/[0.04] transition-all duration-500 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between shadow-lg hover:shadow-[0_16px_40px_rgba(212,175,55,0.12)] focus:outline-none focus:ring-1 focus:ring-[#d4af37]"
+            className="group relative p-6 md:p-8 rounded-2xl bg-gradient-to-b from-[#181a1f]/90 via-[#101216]/90 to-[#0b0c0e]/95 border border-white/[0.08] hover:border-[#d4af37]/60 transition-all duration-500 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)] focus:outline-none focus:ring-1 focus:ring-[#d4af37] overflow-hidden"
             title={`Buka detail metodologi ${item.title}`}
           >
+            {/* Top edge glow sheen */}
+            <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
             <div>
               <div className="flex items-center justify-between mb-3 md:mb-4">
                 <span className="text-2xl md:text-3xl font-serif text-[#d4af37] font-normal block group-hover:scale-105 transition-transform">

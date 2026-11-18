@@ -1132,7 +1132,7 @@ const DEFAULTS = {
   hint: "Move across the form",
   hintTouch: "Touch the form",
   background: "#EBE9E5",
-  darkBackground: "#111110",
+  darkBackground: "#0b0c0d",
   textColor: "#151514",
   accentColor: "#151514",
   headingFont: "'Geist', 'Helvetica Neue', Arial, sans-serif",
