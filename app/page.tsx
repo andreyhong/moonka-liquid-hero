@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SculptureHero from "@/components/ui/liquid-sculpture-hero";
 
 export default function Home() {
@@ -55,7 +56,12 @@ export default function Home() {
         {/* Services & Works Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {/* Card 1: AI UGC & Video */}
-          <div className="group relative rounded-2xl overflow-hidden bg-white/[0.03] border border-white/10 p-5 md:p-6 backdrop-blur-md transition-all duration-500 hover:border-[#d4af37]/40 hover:-translate-y-1">
+          <div className="group relative rounded-2xl overflow-hidden bg-white/[0.03] border border-white/10 p-5 md:p-6 backdrop-blur-md transition-all duration-500 hover:border-[#d4af37]/60 hover:-translate-y-1 cursor-pointer">
+            <Link
+              href="/projects/island-rituals/"
+              className="absolute inset-0 z-10"
+              aria-label="Buka galeri lengkap karya Island Rituals"
+            />
             <div className="h-60 sm:h-72 rounded-xl relative overflow-hidden flex flex-col justify-between p-5 md:p-6 border border-white/10">
               <img
                 src="/projects/island-rituals.jpg"
@@ -67,7 +73,9 @@ export default function Home() {
                 EXPERTISE 01
               </span>
               <div className="relative z-10">
-                <h3 className="text-xl md:text-2xl font-serif text-white mb-1">AI UGC &amp; Video Ads</h3>
+                <h3 className="text-xl md:text-2xl font-serif text-white mb-1 group-hover:text-[#d4af37] transition-colors">
+                  AI UGC &amp; Video Ads
+                </h3>
                 <p className="text-xs text-zinc-300">Google Flow &middot; Veo &middot; Nano Banana &middot; CapCut</p>
               </div>
             </div>
@@ -76,22 +84,18 @@ export default function Home() {
                 Pembuatan video iklan bergaya UGC organik (9:16) untuk Island Rituals Nail Serum. Mengubah product brief menjadi video berkonversi tinggi melalui concept prompting, digital talent avatar, POV demo produk, dan audio sync.
               </p>
               <div className="flex flex-wrap items-center justify-between pt-3 border-t border-white/5 gap-2">
-                <span className="text-xs text-zinc-500 font-medium">Klien: Island Rituals (Bali)</span>
-                <div className="flex items-center gap-2">
-                  <a
-                    href="https://drive.google.com/drive/folders/1IbwEfIx3Nc8L-dQfI3CPGlFUELEzDXx4?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-1.5 rounded-full text-xs font-medium border border-white/15 text-zinc-300 hover:text-white hover:border-white/40 transition-colors"
-                    title="Buka Google Drive Island Rituals"
-                  >
-                    Drive ↗
-                  </a>
+                <div className="flex flex-col">
+                  <span className="text-xs text-zinc-500 font-medium">Klien: Island Rituals (Bali)</span>
+                  <span className="text-[11px] text-[#d4af37] font-medium tracking-wide mt-0.5 inline-flex items-center gap-1 group-hover:underline">
+                    Lihat Seluruh Assets (5 Video) ↗
+                  </span>
+                </div>
+                <div className="relative z-20">
                   <a
                     href="https://wa.me/6288299258629?text=Halo%20Andrey%20Hong,%20saya%20ingin%20konsultasi%20layanan%20AI%20UGC%20Video"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 rounded-full text-xs font-medium border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
+                    className="inline-block px-3.5 py-1.5 rounded-full text-xs font-medium border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
                   >
                     Inquire &rarr;
                   </a>
@@ -101,7 +105,12 @@ export default function Home() {
           </div>
 
           {/* Card 2: E-Commerce & Ads */}
-          <div className="group relative rounded-2xl overflow-hidden bg-white/[0.03] border border-white/10 p-5 md:p-6 backdrop-blur-md transition-all duration-500 hover:border-[#d4af37]/40 hover:-translate-y-1">
+          <div className="group relative rounded-2xl overflow-hidden bg-white/[0.03] border border-white/10 p-5 md:p-6 backdrop-blur-md transition-all duration-500 hover:border-[#d4af37]/60 hover:-translate-y-1 cursor-pointer">
+            <Link
+              href="/projects/ecommerce-ads/"
+              className="absolute inset-0 z-10"
+              aria-label="Buka galeri lengkap karya Aussie Sawit dan Howell Niaga"
+            />
             <div className="h-60 sm:h-72 rounded-xl relative overflow-hidden flex flex-col justify-between p-5 md:p-6 border border-white/10">
               <img
                 src="/projects/aussie-sawit.jpg"
@@ -113,7 +122,9 @@ export default function Home() {
                 EXPERTISE 02
               </span>
               <div className="relative z-10">
-                <h3 className="text-xl md:text-2xl font-serif text-white mb-1">E-Commerce &amp; Commercial Ads</h3>
+                <h3 className="text-xl md:text-2xl font-serif text-white mb-1 group-hover:text-[#d4af37] transition-colors">
+                  E-Commerce &amp; Commercial Ads
+                </h3>
                 <p className="text-xs text-zinc-300">ChatGPT Image &middot; Midjourney &middot; Photoshop &middot; Illustrator</p>
               </div>
             </div>
@@ -122,31 +133,18 @@ export default function Home() {
                 Produksi visual etalase toko online (Shopee/Tokopedia Store Decoration) &amp; creative ads media sosial berkonversi tinggi untuk sektor agrikultur perkebunan (Aussie Sawit) dan elektronik (Howell Niaga).
               </p>
               <div className="flex flex-wrap items-center justify-between pt-3 border-t border-white/5 gap-2">
-                <span className="text-xs text-zinc-500 font-medium">Klien: Aussie Sawit &middot; Howell</span>
-                <div className="flex flex-wrap items-center gap-1.5">
-                  <a
-                    href="https://drive.google.com/drive/folders/1Sxcv-JSrzJTr6GFxyiVGFOQEc9vfPZvB?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-2.5 py-1.5 rounded-full text-[11px] font-medium border border-white/15 text-zinc-300 hover:text-white hover:border-white/40 transition-colors"
-                    title="Buka Google Drive Aussie Sawit"
-                  >
-                    Sawit ↗
-                  </a>
-                  <a
-                    href="https://drive.google.com/drive/folders/1R9M4tpbVRMXsOyCO4vdGaAgO43-lhARg?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-2.5 py-1.5 rounded-full text-[11px] font-medium border border-white/15 text-zinc-300 hover:text-white hover:border-white/40 transition-colors"
-                    title="Buka Google Drive Howell Niaga"
-                  >
-                    Howell ↗
-                  </a>
+                <div className="flex flex-col">
+                  <span className="text-xs text-zinc-500 font-medium">Klien: Aussie Sawit &middot; Howell</span>
+                  <span className="text-[11px] text-[#d4af37] font-medium tracking-wide mt-0.5 inline-flex items-center gap-1 group-hover:underline">
+                    Lihat Seluruh Assets (12 Karya) ↗
+                  </span>
+                </div>
+                <div className="relative z-20">
                   <a
                     href="https://wa.me/6288299258629?text=Halo%20Andrey%20Hong,%20saya%20ingin%20konsultasi%20visual%20E-Commerce%20dan%20Ads"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 rounded-full text-xs font-medium border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
+                    className="inline-block px-3.5 py-1.5 rounded-full text-xs font-medium border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
                   >
                     Inquire &rarr;
                   </a>
@@ -156,7 +154,12 @@ export default function Home() {
           </div>
 
           {/* Card 3: AI Fashion & Commercial Reels (Blue Sportswear) */}
-          <div className="group relative rounded-2xl overflow-hidden bg-white/[0.03] border border-white/10 p-5 md:p-6 backdrop-blur-md transition-all duration-500 hover:border-[#d4af37]/40 hover:-translate-y-1">
+          <div className="group relative rounded-2xl overflow-hidden bg-white/[0.03] border border-white/10 p-5 md:p-6 backdrop-blur-md transition-all duration-500 hover:border-[#d4af37]/60 hover:-translate-y-1 cursor-pointer">
+            <Link
+              href="/projects/blue-sportswear/"
+              className="absolute inset-0 z-10"
+              aria-label="Buka galeri lengkap karya Blue Sportswear"
+            />
             <div className="h-60 sm:h-72 rounded-xl relative overflow-hidden flex flex-col justify-between p-5 md:p-6 border border-white/10">
               <img
                 src="/projects/blue-sportswear.jpg"
@@ -168,7 +171,9 @@ export default function Home() {
                 EXPERTISE 03
               </span>
               <div className="relative z-10">
-                <h3 className="text-xl md:text-2xl font-serif text-white mb-1">AI Fashion &amp; Commercial Reels</h3>
+                <h3 className="text-xl md:text-2xl font-serif text-white mb-1 group-hover:text-[#d4af37] transition-colors">
+                  AI Fashion &amp; Commercial Reels
+                </h3>
                 <p className="text-xs text-zinc-300">Midjourney &middot; Veo &middot; Google Flow &middot; Premiere Pro</p>
               </div>
             </div>
@@ -177,22 +182,18 @@ export default function Home() {
                 Pembuatan video reels kampanye mode dan visual lookbook activewear/knitwear untuk brand busana Blue Sportswear (Denmark). Menerapkan konsistensi model AI di set multi-lokasi (Paris, Courchevel, Analog Nature) dengan pencahayaan sinematik.
               </p>
               <div className="flex flex-wrap items-center justify-between pt-3 border-t border-white/5 gap-2">
-                <span className="text-xs text-zinc-500 font-medium">Klien: Blue Sportswear (Denmark)</span>
-                <div className="flex items-center gap-2">
-                  <a
-                    href="https://drive.google.com/drive/folders/1rDs8J8UxovliGN6djYoZefdoYF2LgFGt?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-1.5 rounded-full text-xs font-medium border border-white/15 text-zinc-300 hover:text-white hover:border-white/40 transition-colors"
-                    title="Buka Google Drive Blue Sportswear"
-                  >
-                    Drive ↗
-                  </a>
+                <div className="flex flex-col">
+                  <span className="text-xs text-zinc-500 font-medium">Klien: Blue Sportswear (Denmark)</span>
+                  <span className="text-[11px] text-[#d4af37] font-medium tracking-wide mt-0.5 inline-flex items-center gap-1 group-hover:underline">
+                    Lihat Seluruh Assets (32 Karya) ↗
+                  </span>
+                </div>
+                <div className="relative z-20">
                   <a
                     href="https://wa.me/6288299258629?text=Halo%20Andrey%20Hong,%20saya%20ingin%20konsultasi%20layanan%20AI%20Fashion%20dan%20Commercial%20Reels%20(Blue%20Sportswear)"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-1.5 rounded-full text-xs font-medium border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
+                    className="inline-block px-3.5 py-1.5 rounded-full text-xs font-medium border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
                   >
                     Inquire &rarr;
                   </a>
