@@ -90,7 +90,7 @@ export default function Home() {
 
                 {/* Title & Tools with High Hierarchy */}
                 <div className="mt-5">
-                  <h3 className="text-2xl font-bold tracking-tight text-white mb-2 group-hover:text-white flex items-baseline gap-0.5">
+                  <h3 className="text-2xl font-bold tracking-tight text-white mb-2 group-hover:text-white">
                     AI UGC &amp; Video Ads<span className="text-[#d4af37]">.</span>
                   </h3>
                   
@@ -187,7 +187,7 @@ export default function Home() {
 
                 {/* Title & Tools with High Hierarchy */}
                 <div className="mt-5">
-                  <h3 className="text-2xl font-bold tracking-tight text-white mb-2 group-hover:text-white flex items-baseline gap-0.5">
+                  <h3 className="text-2xl font-bold tracking-tight text-white mb-2 group-hover:text-white">
                     E-Commerce &amp; Commercial Ads<span className="text-[#d4af37]">.</span>
                   </h3>
                   
@@ -284,7 +284,7 @@ export default function Home() {
 
                 {/* Title & Tools with High Hierarchy */}
                 <div className="mt-5">
-                  <h3 className="text-2xl font-bold tracking-tight text-white mb-2 group-hover:text-white flex items-baseline gap-0.5">
+                  <h3 className="text-2xl font-bold tracking-tight text-white mb-2 group-hover:text-white">
                     AI Fashion &amp; Commercial Reels<span className="text-[#d4af37]">.</span>
                   </h3>
                   
