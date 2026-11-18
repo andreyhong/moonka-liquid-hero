@@ -1163,12 +1163,12 @@ function computeRect(
     rw = w * 1.3 * p.scale
     maxH = bandH * 1.15 * p.scale
   } else if (aspect < 1.3) {
-    // portrait image for phones: fills the width, may tuck under the headline
-    rw = w * 1.0 * p.mobileScale
-    maxH = bandH * 1.0 * p.mobileScale
+    // portrait image for phones: keep inside band without colliding with headline
+    rw = w * 0.85 * p.mobileScale
+    maxH = bandH * 0.95 * p.mobileScale
   } else {
-    rw = w * 1.9 * p.mobileScale
-    maxH = bandH * 1.2 * p.mobileScale
+    rw = w * 1.15 * p.mobileScale
+    maxH = bandH * 0.95 * p.mobileScale
   }
   if (rw / aspect > maxH) rw = maxH * aspect
   const rh = rw / aspect
@@ -1206,8 +1206,31 @@ const CSS = `
 .sh-theme:hover{background:var(--sh-fg);color:var(--sh-bg)}
 .sh-theme:focus-visible{outline:2px solid var(--sh-fg);outline-offset:4px}
 .sh-navcta{color:inherit;text-decoration:none;font-size:13.5px;padding:8px 14px;border:1px solid color-mix(in srgb,var(--sh-fg) 22%,transparent);
-  border-radius:999px;transition:background .25s,color .25s}
+  border-radius:999px;transition:background .25s,color .25s;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center}
 .sh-navcta:hover{background:var(--sh-fg);color:var(--sh-bg)}
+.sh-navcta-short{display:none}
+.sh-menu-item{display:none}
+
+.sh-menu-btn{display:inline-grid;place-items:center;width:34px;height:34px;padding:0;border-radius:50%;cursor:pointer;color:inherit;background:transparent;
+  border:1px solid color-mix(in srgb,var(--sh-fg) 22%,transparent);transition:background .25s,color .25s}
+.sh-menu-btn:hover{background:var(--sh-fg);color:var(--sh-bg)}
+.sh-menu-btn:focus-visible{outline:2px solid var(--sh-fg);outline-offset:4px}
+
+.sh-mobile-overlay{position:fixed;inset:0;z-index:999;background:color-mix(in srgb,var(--sh-bg) 96%,transparent);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);color:var(--sh-fg);display:flex;flex-direction:column;animation:sh-menu-fade .25s cubic-bezier(.16,1,.3,1)}
+.sh-mobile-menu{display:flex;flex-direction:column;height:100%;padding:20px 24px 32px;max-width:480px;margin:0 auto;width:100%;box-sizing:border-box}
+.sh-mobile-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid color-mix(in srgb,var(--sh-fg) 10%,transparent);margin-bottom:24px}
+.sh-mobile-nav{display:flex;flex-direction:column;gap:4px;flex:1;overflow-y:auto}
+.sh-mobile-link{display:flex;align-items:center;gap:14px;padding:16px 0;color:inherit;text-decoration:none;font-size:18px;font-weight:500;
+  border-bottom:1px solid color-mix(in srgb,var(--sh-fg) 6%,transparent);transition:padding-left .2s,opacity .2s}
+.sh-mobile-link:hover{padding-left:6px;opacity:1}
+.sh-mobile-num{font-size:11px;font-family:monospace;letter-spacing:.08em;opacity:.4}
+.sh-mobile-label{letter-spacing:-.01em}
+.sh-mobile-footer{margin-top:auto;padding-top:20px;border-top:1px solid color-mix(in srgb,var(--sh-fg) 10%,transparent)}
+.sh-mobile-theme-row{display:flex;align-items:center;justify-content:space-between;padding-top:12px}
+
+@keyframes sh-menu-fade{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:scale(1)}}
+
 .sh-hint{position:absolute;z-index:1;transform:translate(-50%,0);display:flex;align-items:center;gap:10px;white-space:nowrap;
   font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;pointer-events:none;transition:opacity .8s ease}
 .sh-hint::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;animation:sh-pulse 2.4s ease-in-out infinite}
@@ -1237,23 +1260,68 @@ const CSS = `
 .sh-credit{position:absolute;z-index:2;right:clamp(20px,3.2cqw,48px);bottom:10px;font-size:10px;letter-spacing:.06em;
   color:inherit;opacity:.38;text-decoration:none}
 .sh-credit:hover{opacity:.8}
+
 @container (max-width:1023px){
   .sh-content{grid-template-columns:1fr;gap:28px}
   .sh-aside{justify-self:start;max-width:520px;padding-bottom:0}
-  .sh-h1{font-size:clamp(40px,min(9.5cqw,9cqh),96px)}
+  .sh-h1{font-size:clamp(36px,min(8.5cqw,8cqh),80px)}
 }
 @container (max-width:767px){
   .sh-links li:not(.sh-keep){display:none}
+  .sh-menu-item{display:inline-flex}
 }
 @container (max-width:639px){
-  .sh-nav{padding-top:20px}
-  .sh-h1{font-size:clamp(36px,min(12.5cqw,7.2cqh),60px);line-height:.94}
-  .sh-body{font-size:15px;margin-bottom:20px}
-  .sh-eyebrow{font-size:11px}
-  .sh-ctas{gap:18px}
-  .sh-btn{height:48px}
-  .sh-content{padding-bottom:40px}
-  .sh-credit{right:auto;left:50%;transform:translateX(-50%)}
+  .sh-root{min-height:100svh;height:auto}
+  .sh-nav{padding:16px 18px 0;gap:10px}
+  .sh-links{gap:8px}
+  .sh-brand{font-size:15px;letter-spacing:-.02em}
+  .sh-theme, .sh-menu-btn{width:32px;height:32px}
+  .sh-navcta{font-size:12px;padding:6px 12px}
+  .sh-spacer{min-height:80px;flex:1 1 auto}
+  .sh-content{padding:0 18px 24px;gap:16px}
+  .sh-eyebrow{font-size:10px;letter-spacing:.1em;margin-bottom:10px;gap:8px}
+  .sh-eyebrow::before{width:20px}
+  .sh-h1{font-size:clamp(25px,min(8cqw,6cqh),36px);line-height:1.08;letter-spacing:-.03em}
+  .sh-body{font-size:13.5px;line-height:1.55;margin-bottom:16px;max-width:100%;opacity:.8}
+  .sh-ctas{display:flex;flex-direction:column;align-items:stretch;gap:12px}
+  .sh-btn{width:100%;height:46px;justify-content:center;font-size:14px;padding:0 18px}
+  .sh-txt{justify-content:center;padding:6px 0;font-size:13.5px}
+  .sh-credit{display:none}
+  .sh-hint{display:none}
+}
+@container (max-width:390px){
+  .sh-navcta-full{display:none}
+  .sh-navcta-short{display:inline}
+  .sh-navcta{font-size:11.5px;padding:5px 10px}
+}
+
+@media (max-width:767px){
+  .sh-links li:not(.sh-keep){display:none}
+  .sh-menu-item{display:inline-flex}
+}
+@media (max-width:639px){
+  .sh-root{min-height:100svh;height:auto}
+  .sh-nav{padding:16px 18px 0;gap:10px}
+  .sh-links{gap:8px}
+  .sh-brand{font-size:15px;letter-spacing:-.02em}
+  .sh-theme, .sh-menu-btn{width:32px;height:32px}
+  .sh-navcta{font-size:12px;padding:6px 12px}
+  .sh-spacer{min-height:80px;flex:1 1 auto}
+  .sh-content{padding:0 18px 24px;gap:16px}
+  .sh-eyebrow{font-size:10px;letter-spacing:.1em;margin-bottom:10px;gap:8px}
+  .sh-eyebrow::before{width:20px}
+  .sh-h1{font-size:clamp(25px,7.5vw,36px);line-height:1.08;letter-spacing:-.03em}
+  .sh-body{font-size:13.5px;line-height:1.55;margin-bottom:16px;max-width:100%;opacity:.8}
+  .sh-ctas{display:flex;flex-direction:column;align-items:stretch;gap:12px}
+  .sh-btn{width:100%;height:46px;justify-content:center;font-size:14px;padding:0 18px}
+  .sh-txt{justify-content:center;padding:6px 0;font-size:13.5px}
+  .sh-credit{display:none}
+  .sh-hint{display:none}
+}
+@media (max-width:390px){
+  .sh-navcta-full{display:none}
+  .sh-navcta-short{display:inline}
+  .sh-navcta{font-size:11.5px;padding:5px 10px}
 }
 @media (prefers-reduced-motion:reduce){
   .sh-hint::before{animation:none}
@@ -1390,6 +1458,18 @@ export default function SculptureHero(props: SculptureHeroProps) {
   const engineRef = React.useRef<LiquidEngine | null>(null)
   const aspectRef = React.useRef(1983 / 793)
   const [isTouch, setIsTouch] = React.useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
+
+  React.useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [mobileMenuOpen])
 
   const layout = React.useRef({ scale: sculptureScale, mobileScale: mobileSculptureScale, x: sculptureX, y: sculptureY })
   layout.current = {
@@ -1463,13 +1543,15 @@ export default function SculptureHero(props: SculptureHeroProps) {
       top: nav ? nav.offsetTop + nav.offsetHeight + 8 : 16,
       bottom: content ? content.offsetTop - 8 : h,
     }
-    // a portrait sculpture on phones dissolves into the top of the copy
-    if (mob && aspectRef.current < 1.3 && content) band.bottom += content.offsetHeight * 0.3
+    if (mob && band.bottom <= band.top + 80) {
+      band.bottom = band.top + 120
+    }
     const rect = computeRect(w, h, aspectRef.current, band, layout.current)
     const bd = backdropRef.current
     if (bd) {
       const chars = Math.max(1, (bd.textContent || "").length)
-      bd.style.fontSize = Math.min((band.bottom - band.top) * 0.95, (w * 0.92) / (chars * 0.56)) + "px"
+      const bandSpan = Math.max(60, band.bottom - band.top)
+      bd.style.fontSize = Math.min(bandSpan * 0.9, (w * 0.92) / (chars * 0.56)) + "px"
       bd.style.top = (band.top + band.bottom) / 2 + "px"
     }
     const img = imgRef.current
@@ -1481,8 +1563,8 @@ export default function SculptureHero(props: SculptureHeroProps) {
     }
     const hintEl = hintRef.current
     if (hintEl) {
-      // the portrait phone sculpture runs into the copy: no room for the cue there
-      hintEl.style.display = mob && aspectRef.current < 1.3 ? "none" : ""
+      // hide the hint on mobile to keep the stage pristine and avoid collision
+      hintEl.style.display = mob ? "none" : ""
       hintEl.style.left = clamp(rect.x + rect.w / 2, 80, w - 80) + "px"
       hintEl.style.top = Math.min(rect.y + rect.h * 0.95, band.bottom - 20) + "px"
     }
@@ -1693,12 +1775,99 @@ export default function SculptureHero(props: SculptureHeroProps) {
                   target={navCta.href.startsWith("http") ? "_blank" : undefined}
                   rel={navCta.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 >
-                  {navCta.label}
+                  <span className="sh-navcta-full">{navCta.label}</span>
+                  <span className="sh-navcta-short">Diskusi</span>
                 </a>
+              </li>
+            )}
+            {navLinks && navLinks.length > 0 && (
+              <li className="sh-keep sh-menu-item">
+                <button
+                  type="button"
+                  className="sh-menu-btn"
+                  aria-label={mobileMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
+                  aria-expanded={mobileMenuOpen}
+                  onClick={() => setMobileMenuOpen((o) => !o)}
+                >
+                  {mobileMenuOpen ? (
+                    <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M3 3l10 10M13 3L3 13" strokeLinecap="round" />
+                    </svg>
+                  ) : (
+                    <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M2 4.5h12M2 8h12M2 11.5h12" strokeLinecap="round" />
+                    </svg>
+                  )}
+                </button>
               </li>
             )}
           </ul>
         </nav>
+      )}
+
+      {/* Mobile Navigation Overlay Drawer */}
+      {mobileMenuOpen && (
+        <div className="sh-mobile-overlay" role="dialog" aria-modal="true" aria-label="Menu navigasi mobile">
+          <div className="sh-mobile-menu">
+            <div className="sh-mobile-header">
+              <span className="sh-brand">{brand}</span>
+              <button
+                type="button"
+                className="sh-theme"
+                aria-label="Tutup menu"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M3 3l10 10M13 3L3 13" strokeLinecap="round" />
+                </svg>
+              </button>
+            </div>
+
+            <nav className="sh-mobile-nav">
+              {navLinks.map((l, i) => (
+                <a
+                  key={i}
+                  href={l.href}
+                  className="sh-mobile-link"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span className="sh-mobile-num">0{i + 1}</span>
+                  <span className="sh-mobile-label">{l.label}</span>
+                  <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.4" style={{ marginLeft: "auto", opacity: 0.5 }}>
+                    <path d="M2 7h10M8 3l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
+              ))}
+            </nav>
+
+            <div className="sh-mobile-footer">
+              {navCta && navCta.label && (
+                <a
+                  className="sh-btn"
+                  href={navCta.href}
+                  target={navCta.href.startsWith("http") ? "_blank" : undefined}
+                  rel={navCta.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  style={{ width: "100%", justifyContent: "center", marginBottom: 16 }}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {navCta.label}
+                  <Arrow />
+                </a>
+              )}
+              <div className="sh-mobile-theme-row">
+                <span style={{ fontSize: 13, opacity: 0.65 }}>Ubah Tema Tampilan</span>
+                <button
+                  type="button"
+                  className="sh-theme"
+                  aria-label="Ganti tema"
+                  onClick={() => setMode((m) => (m === "dark" ? "light" : "dark"))}
+                >
+                  {mode === "dark" ? <SunIcon /> : <MoonIcon />}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
 
       {interactive && hintText ? (
