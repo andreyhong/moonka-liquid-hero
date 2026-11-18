@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
+import TiltCard from "@/components/ui/tilt-card";
 import "./case-study.css";
 
 export interface MediaItem {
@@ -209,15 +210,24 @@ export default function CaseStudyDetail({
 
           <div className="case-gallery-grid">
             {items.map((item, idx) => {
-              const countStr = String(idx + 1).padStart(2, "0");
               return (
-                <button
+                <TiltCard
                   key={`${item.id}-${idx}`}
-                  type="button"
+                  maxRotation={10}
+                  elevateZ={14}
+                  glareColor="rgba(212, 255, 95, 0.16)"
                   className={`case-media-tile ${
                     item.type === "VIDEO" ? "case-tile-video" : "case-tile-image"
                   }`}
                   onClick={() => handleOpen(idx)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      handleOpen(idx);
+                    }
+                  }}
                 >
                   <div
                     className={`case-media-frame ${
@@ -225,6 +235,7 @@ export default function CaseStudyDetail({
                         ? "case-media-video"
                         : "case-media-image"
                     }`}
+                    style={{ transform: "translateZ(18px)", transformStyle: "preserve-3d" }}
                   >
                     <img
                       loading="lazy"
@@ -233,13 +244,18 @@ export default function CaseStudyDetail({
                       )}&sz=w1000`}
                       alt={item.title}
                     />
-                    <span>{item.type === "VIDEO" ? "▶ PLAY" : "VIEW IMAGE"}</span>
+                    <span style={{ transform: "translateZ(26px)" }}>
+                      {item.type === "VIDEO" ? "▶ PLAY" : "VIEW IMAGE"}
+                    </span>
                   </div>
-                  <div className="case-media-foot">
+                  <div
+                    className="case-media-foot"
+                    style={{ transform: "translateZ(12px)" }}
+                  >
                     <strong>{item.title}</strong>
                     <small>{item.type}</small>
                   </div>
-                </button>
+                </TiltCard>
               );
             })}
           </div>
