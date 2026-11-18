@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useRef, useState, useCallback } from "react";
+import { useRouter } from "next/navigation";
 
 interface TiltCardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   className?: string;
+  href?: string;
   maxRotation?: number; // max tilt degrees (default: 12)
   perspective?: number; // perspective in px (default: 1000)
   scale?: number; // scale on hover (default: 1.02)
@@ -15,15 +17,18 @@ interface TiltCardProps extends React.HTMLAttributes<HTMLDivElement> {
 export default function TiltCard({
   children,
   className = "",
+  href,
   maxRotation = 12,
   perspective = 1000,
   scale = 1.02,
   glareColor = "rgba(212, 175, 55, 0.15)",
   elevateZ = 15,
   style,
+  onClick,
   ...props
 }: TiltCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
   const [transformStyle, setTransformStyle] = useState("");
   const [glarePos, setGlarePos] = useState({ x: 50, y: 50, opacity: 0 });
@@ -85,13 +90,49 @@ export default function TiltCard({
     setGlarePos((prev) => ({ ...prev, opacity: 0 }));
   };
 
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    // Don't navigate if user clicked on WhatsApp button or any explicit action
+    if (
+      target.closest(
+        'a[href*="wa.me"], a[target="_blank"], button, [data-prevent-nav="true"]'
+      )
+    ) {
+      return;
+    }
+
+    if (href) {
+      if (e.metaKey || e.ctrlKey) {
+        window.open(href, "_blank");
+      } else {
+        router.push(href);
+      }
+    }
+
+    onClick?.(e);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (href && (e.key === "Enter" || e.key === " ")) {
+      e.preventDefault();
+      router.push(href);
+    }
+    props.onKeyDown?.(e);
+  };
+
   return (
     <div
       ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative will-change-transform ${className}`}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      role={href ? "link" : props.role}
+      tabIndex={href ? 0 : props.tabIndex}
+      className={`relative will-change-transform ${
+        href ? "cursor-pointer" : ""
+      } ${className}`}
       style={{
         transformStyle: "preserve-3d",
         transform: transformStyle || `perspective(${perspective}px)`,

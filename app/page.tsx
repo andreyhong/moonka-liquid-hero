@@ -58,16 +58,12 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {/* Card 1: AI UGC & Video */}
           <TiltCard
+            href="/projects/island-rituals/"
             maxRotation={10}
             elevateZ={16}
             glareColor="rgba(212, 175, 55, 0.2)"
             className="group rounded-2xl overflow-hidden bg-white/[0.03] border border-white/10 p-5 md:p-6 backdrop-blur-md hover:border-[#d4af37]/70 cursor-pointer"
           >
-            <Link
-              href="/projects/island-rituals/"
-              className="absolute inset-0 z-10"
-              aria-label="Buka galeri lengkap karya Island Rituals"
-            />
             <div
               className="h-60 sm:h-72 rounded-xl relative overflow-hidden flex flex-col justify-between p-5 md:p-6 border border-white/10 transition-transform duration-300"
               style={{ transform: "translateZ(24px)", transformStyle: "preserve-3d" }}
@@ -104,15 +100,21 @@ export default function Home() {
               <div className="flex flex-wrap items-center justify-between pt-3 border-t border-white/5 gap-2">
                 <div className="flex flex-col">
                   <span className="text-xs text-zinc-500 font-medium">Klien: Island Rituals (Bali)</span>
-                  <span className="text-[11px] text-[#d4af37] font-medium tracking-wide mt-0.5 inline-flex items-center gap-1 group-hover:underline">
+                  <Link
+                    href="/projects/island-rituals/"
+                    className="text-[11px] text-[#d4af37] font-medium tracking-wide mt-0.5 inline-flex items-center gap-1 group-hover:underline"
+                    style={{ transform: "translateZ(28px)" }}
+                  >
                     Lihat Seluruh Assets (5 Video) ↗
-                  </span>
+                  </Link>
                 </div>
-                <div className="relative z-20">
+                <div className="relative z-20" style={{ transform: "translateZ(28px)" }}>
                   <a
                     href="https://wa.me/6288299258629?text=Halo%20Andrey%20Hong,%20saya%20ingin%20konsultasi%20layanan%20AI%20UGC%20Video"
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-prevent-nav="true"
+                    onClick={(e) => e.stopPropagation()}
                     className="inline-block px-3.5 py-1.5 rounded-full text-xs font-medium border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
                   >
                     Inquire &rarr;
@@ -124,16 +126,12 @@ export default function Home() {
 
           {/* Card 2: E-Commerce & Ads */}
           <TiltCard
+            href="/projects/ecommerce-ads/"
             maxRotation={10}
             elevateZ={16}
             glareColor="rgba(212, 175, 55, 0.2)"
             className="group rounded-2xl overflow-hidden bg-white/[0.03] border border-white/10 p-5 md:p-6 backdrop-blur-md hover:border-[#d4af37]/70 cursor-pointer"
           >
-            <Link
-              href="/projects/ecommerce-ads/"
-              className="absolute inset-0 z-10"
-              aria-label="Buka galeri lengkap karya Aussie Sawit dan Howell Niaga"
-            />
             <div
               className="h-60 sm:h-72 rounded-xl relative overflow-hidden flex flex-col justify-between p-5 md:p-6 border border-white/10 transition-transform duration-300"
               style={{ transform: "translateZ(24px)", transformStyle: "preserve-3d" }}
@@ -170,15 +168,21 @@ export default function Home() {
               <div className="flex flex-wrap items-center justify-between pt-3 border-t border-white/5 gap-2">
                 <div className="flex flex-col">
                   <span className="text-xs text-zinc-500 font-medium">Klien: Aussie Sawit &middot; Howell</span>
-                  <span className="text-[11px] text-[#d4af37] font-medium tracking-wide mt-0.5 inline-flex items-center gap-1 group-hover:underline">
+                  <Link
+                    href="/projects/ecommerce-ads/"
+                    className="text-[11px] text-[#d4af37] font-medium tracking-wide mt-0.5 inline-flex items-center gap-1 group-hover:underline"
+                    style={{ transform: "translateZ(28px)" }}
+                  >
                     Lihat Seluruh Assets (12 Karya) ↗
-                  </span>
+                  </Link>
                 </div>
-                <div className="relative z-20">
+                <div className="relative z-20" style={{ transform: "translateZ(28px)" }}>
                   <a
                     href="https://wa.me/6288299258629?text=Halo%20Andrey%20Hong,%20saya%20ingin%20konsultasi%20visual%20E-Commerce%20dan%20Ads"
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-prevent-nav="true"
+                    onClick={(e) => e.stopPropagation()}
                     className="inline-block px-3.5 py-1.5 rounded-full text-xs font-medium border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
                   >
                     Inquire &rarr;
@@ -190,16 +194,12 @@ export default function Home() {
 
           {/* Card 3: AI Fashion & Commercial Reels (Blue Sportswear) */}
           <TiltCard
+            href="/projects/blue-sportswear/"
             maxRotation={10}
             elevateZ={16}
             glareColor="rgba(212, 175, 55, 0.2)"
             className="group rounded-2xl overflow-hidden bg-white/[0.03] border border-white/10 p-5 md:p-6 backdrop-blur-md hover:border-[#d4af37]/70 cursor-pointer"
           >
-            <Link
-              href="/projects/blue-sportswear/"
-              className="absolute inset-0 z-10"
-              aria-label="Buka galeri lengkap karya Blue Sportswear"
-            />
             <div
               className="h-60 sm:h-72 rounded-xl relative overflow-hidden flex flex-col justify-between p-5 md:p-6 border border-white/10 transition-transform duration-300"
               style={{ transform: "translateZ(24px)", transformStyle: "preserve-3d" }}
@@ -236,15 +236,21 @@ export default function Home() {
               <div className="flex flex-wrap items-center justify-between pt-3 border-t border-white/5 gap-2">
                 <div className="flex flex-col">
                   <span className="text-xs text-zinc-500 font-medium">Klien: Blue Sportswear (Denmark)</span>
-                  <span className="text-[11px] text-[#d4af37] font-medium tracking-wide mt-0.5 inline-flex items-center gap-1 group-hover:underline">
+                  <Link
+                    href="/projects/blue-sportswear/"
+                    className="text-[11px] text-[#d4af37] font-medium tracking-wide mt-0.5 inline-flex items-center gap-1 group-hover:underline"
+                    style={{ transform: "translateZ(28px)" }}
+                  >
                     Lihat Seluruh Assets (32 Karya) ↗
-                  </span>
+                  </Link>
                 </div>
-                <div className="relative z-20">
+                <div className="relative z-20" style={{ transform: "translateZ(28px)" }}>
                   <a
                     href="https://wa.me/6288299258629?text=Halo%20Andrey%20Hong,%20saya%20ingin%20konsultasi%20layanan%20AI%20Fashion%20dan%20Commercial%20Reels%20(Blue%20Sportswear)"
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-prevent-nav="true"
+                    onClick={(e) => e.stopPropagation()}
                     className="inline-block px-3.5 py-1.5 rounded-full text-xs font-medium border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
                   >
                     Inquire &rarr;
