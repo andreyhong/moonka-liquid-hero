@@ -214,10 +214,18 @@ export default function CaseStudyDetail({
                 <button
                   key={`${item.id}-${idx}`}
                   type="button"
-                  className="case-media-tile"
+                  className={`case-media-tile ${
+                    item.type === "VIDEO" ? "case-tile-video" : "case-tile-image"
+                  }`}
                   onClick={() => handleOpen(idx)}
                 >
-                  <div className="case-media-frame">
+                  <div
+                    className={`case-media-frame ${
+                      item.type === "VIDEO"
+                        ? "case-media-video"
+                        : "case-media-image"
+                    }`}
+                  >
                     <img
                       loading="lazy"
                       src={`https://drive.google.com/thumbnail?id=${encodeURIComponent(

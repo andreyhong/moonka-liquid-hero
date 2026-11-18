@@ -337,10 +337,24 @@
 
 .case-media-frame {
   position: relative;
-  aspect-ratio: 9/14;
   border-radius: 8px;
   overflow: hidden;
   background: #191c1b;
+}
+
+/* Video cards: exactly 9:16 aspect ratio so portrait videos fit flush with zero black bars */
+.case-media-frame.case-media-video {
+  aspect-ratio: 9/16;
+}
+
+/* Image cards: maintain existing ratio (9/14) */
+.case-media-frame.case-media-image {
+  aspect-ratio: 9/14;
+}
+
+/* Fallback if no specific modifier */
+.case-media-frame:not(.case-media-video):not(.case-media-image) {
+  aspect-ratio: 9/14;
 }
 
 .case-media-frame img {
@@ -648,26 +662,29 @@
   max-height: 100%;
 }
 
-/* Video specific (9:16 portrait container matching screenshot 2) */
+/* Video specific (Strict 9:16 portrait container matching 9:16 aspect ratio perfectly) */
 .lb-video {
-  width: min(380px, 92vw);
-  height: auto;
-  max-height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
   justify-content: center;
+  gap: 10px;
+  height: 100%;
+  max-height: 100%;
+  width: auto;
 }
 
 .lb-video-frame {
-  width: 100%;
+  height: min(calc(100dvh - 190px), 740px);
+  width: min(calc((100dvh - 190px) * 9 / 16), calc(740px * 9 / 16), 90vw);
+  max-height: calc(90vw * 16 / 9);
   aspect-ratio: 9/16;
-  max-height: calc(100dvh - 210px);
   position: relative;
   overflow: hidden;
   border-radius: 12px;
   background: #000;
   box-shadow: 0 16px 60px rgba(0, 0, 0, 0.7);
+  flex-shrink: 0;
 }
 
 .lb-video-frame iframe {
@@ -777,10 +794,15 @@
     right: 4px;
   }
   .lb-video {
-    width: min(90vw, calc((100dvh - 240px) * 9 / 16), 360px);
+    height: 100%;
+    width: auto;
+    gap: 8px;
   }
   .lb-video-frame {
-    max-height: calc(100dvh - 240px);
+    height: min(calc(100dvh - 220px), 640px);
+    width: min(calc((100dvh - 220px) * 9 / 16), 88vw);
+    max-height: calc(88vw * 16 / 9);
+    aspect-ratio: 9/16;
   }
   .lb-image img {
     max-height: calc(100dvh - 170px);
