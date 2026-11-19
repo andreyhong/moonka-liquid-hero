@@ -1776,7 +1776,7 @@ export default function SculptureHero(props: SculptureHeroProps) {
                   rel={navCta.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 >
                   <span className="sh-navcta-full">{navCta.label}</span>
-                  <span className="sh-navcta-short">Diskusi</span>
+                  <span className="sh-navcta-short">Discuss</span>
                 </a>
               </li>
             )}
@@ -1785,7 +1785,7 @@ export default function SculptureHero(props: SculptureHeroProps) {
                 <button
                   type="button"
                   className="sh-menu-btn"
-                  aria-label={mobileMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
+                  aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                   aria-expanded={mobileMenuOpen}
                   onClick={() => setMobileMenuOpen((o) => !o)}
                 >
@@ -1807,14 +1807,14 @@ export default function SculptureHero(props: SculptureHeroProps) {
 
       {/* Mobile Navigation Overlay Drawer */}
       {mobileMenuOpen && (
-        <div className="sh-mobile-overlay" role="dialog" aria-modal="true" aria-label="Menu navigasi mobile">
+        <div className="sh-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
           <div className="sh-mobile-menu">
             <div className="sh-mobile-header">
               <span className="sh-brand">{brand}</span>
               <button
                 type="button"
                 className="sh-theme"
-                aria-label="Tutup menu"
+                aria-label="Close menu"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -1855,11 +1855,11 @@ export default function SculptureHero(props: SculptureHeroProps) {
                 </a>
               )}
               <div className="sh-mobile-theme-row">
-                <span style={{ fontSize: 13, opacity: 0.65 }}>Ubah Tema Tampilan</span>
+                <span style={{ fontSize: 13, opacity: 0.65 }}>Switch Theme</span>
                 <button
                   type="button"
                   className="sh-theme"
-                  aria-label="Ganti tema"
+                  aria-label={mode === "dark" ? "Switch to light theme" : "Switch to dark theme"}
                   onClick={() => setMode((m) => (m === "dark" ? "light" : "dark"))}
                 >
                   {mode === "dark" ? <SunIcon /> : <MoonIcon />}

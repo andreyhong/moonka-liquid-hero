@@ -177,12 +177,12 @@ export default function BlueSportswearPage() {
       year="2026"
       title="Blue Sportswear"
       subtitle="Copenhagen aesthetic. Multi-location AI cinematic campaigns."
-      intro="Pembuatan video reels kampanye mode dan visual lookbook activewear/knitwear untuk brand busana Blue Sportswear (Denmark). Menerapkan konsistensi model AI di set multi-lokasi (Paris, Courchevel, Analog Nature) dengan pencahayaan sinematik."
+      intro="Commercial fashion reels and activewear/knitwear lookbook visual assets for Danish apparel brand Blue Sportswear, featuring consistent AI models across international locations (Paris, Courchevel, Nordic Nature) with cinematic lighting."
       role="Generative fashion direction, model consistency prompting, cinematic lighting, video pacing & editing"
       deliverables="Cinematic commercial reels (9:16), editorial fashion lookbooks, product sample showcases"
       approachTitle="Consistent model identity across international settings."
       approachSteps="Moodboard curation → AI character seed consistency → multi-environment generation (Paris, Courchevel, Nordic nature) → cinematic color grading & reels pacing"
-      approachNote="Menjaga konsistensi wajah model dan tekstur rajutan activewear hingga 100% di berbagai latar pencahayaan kota Paris, pegunungan salju Courchevel, dan alam terbuka Skandinavia."
+      approachNote="Maintaining 100% facial likeness and activewear knit texture accuracy across varying lighting environments in Paris streets, snowy Courchevel slopes, and Scandinavian open landscapes."
       nextProject={{
         title: "Island Rituals",
         href: "/projects/island-rituals/",

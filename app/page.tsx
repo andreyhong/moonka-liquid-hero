@@ -16,27 +16,27 @@ export default function Home() {
         eyebrow="AI Creative Designer — AI Video & Generative Visual Specialist"
         headline={"Generative AI Visuals,\nEngineered for Impact."}
         headlineAccent="Engineered for Impact."
-        body="Menggabungkan fundamental desain visual 5+ tahun dengan teknologi generative AI mutakhir. Memproduksi video AI UGC, aset komersial e-commerce, dan konten iklan berkonversi tinggi untuk brand global."
+        body="Combining 5+ years of visual design fundamentals with cutting-edge generative AI. Producing AI UGC videos, e-commerce commercial assets, and high-conversion ad creatives for global brands."
         primaryCta={{
-          label: "Konsultasi Proyek (WhatsApp)",
-          href: "https://wa.me/6288299258629?text=Halo%20Andrey%20Hong,%20saya%20tertarik%20bekerja%20sama%20untuk%20proyek%20AI%20Creative%20Design%20&%20Video",
+          label: "Project Consultation (WhatsApp)",
+          href: "https://wa.me/6288299258629?text=Hello%20Andrey%20Hong,%20I'm%20interested%20in%20collaborating%20on%20an%20AI%20Creative%20Design%20&%20Video%20project",
         }}
         secondaryCta={{
-          label: "Eksplorasi Keahlian",
+          label: "Explore Expertise",
           href: "#collection",
         }}
         navLinks={[
-          { label: "Layanan & Karya", href: "#collection" },
-          { label: "Alur Kerja AI", href: "#craft" },
-          { label: "Kolaborasi", href: "#bespoke" },
+          { label: "Services & Work", href: "#collection" },
+          { label: "AI Workflow", href: "#craft" },
+          { label: "Collaboration", href: "#bespoke" },
           { label: "AI Creative Portfolio", href: "https://portfolio.andreydigital.site" },
         ]}
         navCta={{
-          label: "Hire / Diskusi Proyek",
-          href: "https://wa.me/6288299258629?text=Halo%20Andrey%20Hong,%20saya%20ingin%20diskusi%20kebutuhan%20visual%20brand%20saya",
+          label: "Hire / Discuss Project",
+          href: "https://wa.me/6288299258629?text=Hello%20Andrey%20Hong,%20I'd%20like%20to%20discuss%20my%20brand's%20visual%20needs",
         }}
-        hint="Gerakkan kursor pada siluet cairan"
-        hintTouch="Sentuh siluet untuk interaksi partikel"
+        hint="Move cursor across the liquid form"
+        hintTouch="Touch the form to interact with particles"
       />
 
       {/* Section #collection: Featured Expertise & Commercial Works */}
@@ -58,7 +58,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="max-w-md text-sm md:text-base text-zinc-400 font-light leading-relaxed">
-              Penerapan generative AI pada alur kerja kreatif nyata: dari prompt engineering, visual ideation, konsistensi karakter &amp; produk, hingga final delivery siap tayang.
+              Applying generative AI to real-world creative workflows: from prompt engineering and visual ideation to character &amp; product consistency and production-ready final delivery.
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export default function Home() {
               <Link
                 href="/projects/island-rituals/"
                 className="block cursor-pointer focus:outline-none flex-1"
-                title="Buka galeri lengkap karya Island Rituals"
+                title="View full Island Rituals project gallery"
               >
                 <div className="h-60 sm:h-72 rounded-xl relative overflow-hidden border border-white/10 group-hover:border-[#d4af37]/40 transition-colors">
                   <img
@@ -113,9 +113,9 @@ export default function Home() {
                   <li className="flex items-start gap-2.5">
                     <span className="text-[#d4af37] text-[10px] mt-1 shrink-0">◆</span>
                     <div className="text-xs leading-relaxed">
-                      <span className="text-white font-semibold">Format UGC Organik (9:16)</span>
+                      <span className="text-white font-semibold">Organic UGC Format (9:16)</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Konten vertikal siap pakai untuk TikTok &amp; Reels.</span>
+                      <span className="text-zinc-400 font-light">Vertical ready-to-run content for TikTok &amp; Reels.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
@@ -123,7 +123,7 @@ export default function Home() {
                     <div className="text-xs leading-relaxed">
                       <span className="text-white font-semibold">Concept &amp; AI Avatar</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Ubah product brief jadi video presenter natural.</span>
+                      <span className="text-zinc-400 font-light">Transforming product briefs into natural presenter videos.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
@@ -131,7 +131,7 @@ export default function Home() {
                     <div className="text-xs leading-relaxed">
                       <span className="text-white font-semibold">Photorealistic POV</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Demo produk realistis dengan audio presisi.</span>
+                      <span className="text-zinc-400 font-light">Realistic product demonstration with precision audio sync.</span>
                     </div>
                   </li>
                 </ul>
@@ -143,14 +143,14 @@ export default function Home() {
                   href="/projects/island-rituals/"
                   className="flex flex-col group/link"
                 >
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400">Klien: Island Rituals (Bali)</span>
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400">Client: Island Rituals (Bali)</span>
                   <span className="text-xs font-semibold text-[#d4af37] group-hover/link:text-[#f3e5ab] tracking-wide mt-0.5 inline-flex items-center gap-1 group-hover/link:underline">
-                    Lihat Seluruh Assets (5 Video) ↗
+                    View All Assets (5 Videos) ↗
                   </span>
                 </Link>
                 <div>
                   <a
-                    href="https://wa.me/6288299258629?text=Halo%20Andrey%20Hong,%20saya%20ingin%20konsultasi%20layanan%20AI%20UGC%20Video"
+                    href="https://wa.me/6288299258629?text=Hello%20Andrey%20Hong,%20I'd%20like%20to%20inquire%20about%20AI%20UGC%20Video%20services"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block px-4 py-1.5 rounded-full text-xs font-medium border border-white/20 text-white hover:bg-white hover:text-black hover:border-white transition-all shadow-sm"
@@ -170,7 +170,7 @@ export default function Home() {
               <Link
                 href="/projects/ecommerce-ads/"
                 className="block cursor-pointer focus:outline-none flex-1"
-                title="Buka galeri lengkap karya Aussie Sawit dan Howell Niaga"
+                title="View full Aussie Sawit & Howell Niaga project gallery"
               >
                 <div className="h-60 sm:h-72 rounded-xl relative overflow-hidden border border-white/10 group-hover:border-[#d4af37]/40 transition-colors">
                   <img
@@ -210,9 +210,9 @@ export default function Home() {
                   <li className="flex items-start gap-2.5">
                     <span className="text-[#d4af37] text-[10px] mt-1 shrink-0">◆</span>
                     <div className="text-xs leading-relaxed">
-                      <span className="text-white font-semibold">Etalase Toko High-End</span>
+                      <span className="text-white font-semibold">High-End Storefronts</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Dekorasi toko &amp; banner promosi Shopee &amp; Tokopedia.</span>
+                      <span className="text-zinc-400 font-light">Store decorations &amp; promo banners for Shopee &amp; Tokopedia.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
@@ -220,7 +220,7 @@ export default function Home() {
                     <div className="text-xs leading-relaxed">
                       <span className="text-white font-semibold">Multi-Sector Ads</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Aset iklan komersial agrikultur hingga teknologi.</span>
+                      <span className="text-zinc-400 font-light">Commercial advertising assets from agriculture to tech.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
@@ -228,7 +228,7 @@ export default function Home() {
                     <div className="text-xs leading-relaxed">
                       <span className="text-white font-semibold">AI Staging &amp; Mockup</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Visual produk fotorealistik dengan lighting studio.</span>
+                      <span className="text-zinc-400 font-light">Photorealistic product visuals with commercial studio lighting.</span>
                     </div>
                   </li>
                 </ul>
@@ -240,14 +240,14 @@ export default function Home() {
                   href="/projects/ecommerce-ads/"
                   className="flex flex-col group/link"
                 >
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400">Klien: Aussie Sawit &middot; Howell</span>
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400">Client: Aussie Sawit &middot; Howell</span>
                   <span className="text-xs font-semibold text-[#d4af37] group-hover/link:text-[#f3e5ab] tracking-wide mt-0.5 inline-flex items-center gap-1 group-hover/link:underline">
-                    Lihat Seluruh Assets (12 Karya) ↗
+                    View All Assets (12 Works) ↗
                   </span>
                 </Link>
                 <div>
                   <a
-                    href="https://wa.me/6288299258629?text=Halo%20Andrey%20Hong,%20saya%20ingin%20konsultasi%20visual%20E-Commerce%20dan%20Ads"
+                    href="https://wa.me/6288299258629?text=Hello%20Andrey%20Hong,%20I'd%20like%20to%20inquire%20about%20E-Commerce%20and%20Ad%20visuals"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block px-4 py-1.5 rounded-full text-xs font-medium border border-white/20 text-white hover:bg-white hover:text-black hover:border-white transition-all shadow-sm"
@@ -267,7 +267,7 @@ export default function Home() {
               <Link
                 href="/projects/blue-sportswear/"
                 className="block cursor-pointer focus:outline-none flex-1"
-                title="Buka galeri lengkap karya Blue Sportswear"
+                title="View full Blue Sportswear project gallery"
               >
                 <div className="h-60 sm:h-72 rounded-xl relative overflow-hidden border border-white/10 group-hover:border-[#d4af37]/40 transition-colors">
                   <img
@@ -309,15 +309,15 @@ export default function Home() {
                     <div className="text-xs leading-relaxed">
                       <span className="text-white font-semibold">Lookbook &amp; Fashion Reels</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Kampanye video mode activewear brand internasional.</span>
+                      <span className="text-zinc-400 font-light">Activewear fashion video campaign for global brand.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="text-[#d4af37] text-[10px] mt-1 shrink-0">◆</span>
                     <div className="text-xs leading-relaxed">
-                      <span className="text-white font-semibold">Konsistensi Model AI</span>
+                      <span className="text-white font-semibold">AI Model Consistency</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Karakter wajah &amp; proporsi identik di multi-lokasi.</span>
+                      <span className="text-zinc-400 font-light">Identical facial likeness &amp; proportions across multi-locations.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
@@ -325,7 +325,7 @@ export default function Home() {
                     <div className="text-xs leading-relaxed">
                       <span className="text-white font-semibold">Cinematic Lighting</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Visual kelas editorial majalah dengan tekstur kain detail.</span>
+                      <span className="text-zinc-400 font-light">Editorial magazine-grade visuals with tactile fabric detail.</span>
                     </div>
                   </li>
                 </ul>
@@ -337,14 +337,14 @@ export default function Home() {
                   href="/projects/blue-sportswear/"
                   className="flex flex-col group/link"
                 >
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400">Klien: Blue Sportswear (Denmark)</span>
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400">Client: Blue Sportswear (Denmark)</span>
                   <span className="text-xs font-semibold text-[#d4af37] group-hover/link:text-[#f3e5ab] tracking-wide mt-0.5 inline-flex items-center gap-1 group-hover/link:underline">
-                    Lihat Seluruh Assets (32 Karya) ↗
+                    View All Assets (32 Works) ↗
                   </span>
                 </Link>
                 <div>
                   <a
-                    href="https://wa.me/6288299258629?text=Halo%20Andrey%20Hong,%20saya%20ingin%20konsultasi%20layanan%20AI%20Fashion%20dan%20Commercial%20Reels%20(Blue%20Sportswear)"
+                    href="https://wa.me/6288299258629?text=Hello%20Andrey%20Hong,%20I'd%20like%20to%20inquire%20about%20AI%20Fashion%20and%20Commercial%20Reels%20(Blue%20Sportswear)"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block px-4 py-1.5 rounded-full text-xs font-medium border border-white/20 text-white hover:bg-white hover:text-black hover:border-white transition-all shadow-sm"
@@ -376,7 +376,7 @@ export default function Home() {
               <span className="font-serif italic text-[#e6d5b8]">Powered by Generative Precision.</span>
             </h2>
             <p className="text-zinc-400 leading-relaxed font-light text-sm md:text-base">
-              Karya visual yang hebat bukan sekadar hasil prompt acak. Saya memadukan teori pencahayaan fotografi, komposisi sinematik, dan konsistensi anatomi karakter dengan teknologi AI terkini agar brand Anda tampil otentik dan berkelas.
+              Exceptional visual work is never the result of random prompting. I combine photographic lighting theory, cinematic composition, and anatomical character consistency with modern AI tools to ensure your brand looks authentic, cohesive, and premium.
             </p>
           </div>
 
@@ -402,16 +402,16 @@ export default function Home() {
             <span className="font-serif italic text-[#e6d5b8]">Next-Gen AI Visuals?</span>
           </h2>
           <p className="max-w-xl mx-auto text-zinc-400 mb-8 md:mb-10 font-light text-sm md:text-base leading-relaxed">
-            Terbuka untuk kolaborasi pembuatan video AI UGC, creative direction iklan, visual etalase marketplace, atau konsultasi alur kerja generative AI.
+            Open for collaborations on AI UGC video production, commercial ad creative direction, marketplace storefront design, or generative AI workflow consulting.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 max-w-md sm:max-w-none mx-auto">
             <a
-              href="https://wa.me/6288299258629?text=Halo%20Andrey%20Hong,%20saya%20ingin%20diskusi%20proyek%20AI%20Creative%20Design"
+              href="https://wa.me/6288299258629?text=Hello%20Andrey%20Hong,%20I'd%20like%20to%20discuss%20an%20AI%20Creative%20Design%20project"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-6 md:px-8 py-3.5 md:py-4 rounded-full bg-white text-black font-medium text-sm hover:bg-[#e6d5b8] transition-colors text-center"
             >
-              Chat WhatsApp Andrey Hong (088299258629) &rarr;
+              Chat on WhatsApp (088299258629) &rarr;
             </a>
             <a
               href="https://portfolio.andreydigital.site"
@@ -419,7 +419,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-6 md:px-8 py-3.5 md:py-4 rounded-full border border-white/20 text-white font-medium text-sm hover:bg-white/10 transition-colors text-center"
             >
-              Buka AI Creative Portfolio &rarr;
+              Open AI Creative Portfolio &rarr;
             </a>
           </div>
         </div>

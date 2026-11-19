@@ -23,90 +23,90 @@ const craftData: CraftItem[] = [
     num: "01",
     badge: "WORKFLOW PILLAR 01",
     title: "Prompt & Lighting Engineering",
-    tagline: "Sains di Balik Visual Photorealistic Tanpa Distorsi AI",
+    tagline: "The Science Behind Photorealistic Visuals Without AI Artifacts",
     summary:
-      "Penguasaan parameter teknis pencahayaan (cinematic rim light, soft studio fill, golden hour) dan komposisi sudut kamera untuk visual photorealistic kelas editorial komersial.",
+      "Technical mastery of lighting parameters (cinematic rim light, soft studio fill, golden hour) and camera composition for commercial editorial photorealism.",
     pillars: [
       {
-        heading: "Prinsip Pencahayaan Sinematik",
+        heading: "Cinematic Lighting Principles",
         points: [
-          "Cinematic Rim Lighting: Memisahkan siluet produk & talent dari latar belakang gelap untuk impresi premium berkelas.",
-          "Soft Studio Diffuser: Menghilangkan bayangan kasar di kontur wajah dan label kemasan fisik.",
-          "Golden Hour & Color Temp: Kalibrasi temperatur kelvin (3200K tungsten hingga 5600K daylight) yang natural.",
+          "Cinematic Rim Lighting: Separates product & talent silhouettes from dark backgrounds for an elevated, high-end impression.",
+          "Soft Studio Diffusion: Eliminates harsh shadows across facial contours and physical packaging labels.",
+          "Golden Hour & Color Temp: Precise calibration of natural Kelvin color temperatures (3200K tungsten to 5600K daylight).",
         ],
       },
       {
-        heading: "Optik Kamera & Sudut Sinematik",
+        heading: "Camera Optics & Cinematic Framing",
         points: [
-          "Focal Length Emulation: 35mm untuk environmental story, 50mm untuk natural gaze, dan 85mm f/1.8 untuk isolasi detail produk.",
-          "Depth of Field & Bokeh Presisi: Bokeh halus tanpa artefak blur artifisial khas generative AI acak.",
-          "Komposisi Dutch Angle, Low-Angle & Macro POV untuk meningkatkan click-through rate (CTR) iklan.",
+          "Focal Length Emulation: 35mm for environmental storytelling, 50mm for natural gaze, and 85mm f/1.8 for tight product detail isolation.",
+          "Depth of Field & Bokeh Precision: Smooth, optical bokeh without the artificial blur artifacts typical of uncalibrated generative AI.",
+          "Compositional Angles: Dutch angles, low-angle hero framing, and macro POVs engineered to drive higher ad click-through rates (CTR).",
         ],
       },
     ],
     toolchain: ["Midjourney v6", "Stable Diffusion XL", "ComfyUI", "Photoshop Camera Raw"],
     impact:
-      "Visual bebas dari 'AI-plastic look'. Tekstur pori-pori kulit, pantulan kaca, dan serat kain tampil otentik layaknya pemotretan studio profesional berbiaya puluhan juta rupiah.",
+      "Visuals entirely free of the 'AI-plastic look'. Authentic skin pores, glass reflections, and fabric weave comparable to high-budget studio photography shoots.",
   },
   {
     id: "character-product",
     num: "02",
     badge: "WORKFLOW PILLAR 02",
     title: "Character & Product Consistency",
-    tagline: "Menjaga Wajah Talent & Detail Fisik Produk 100% Identik Antar Scene",
+    tagline: "100% Identical Talent Likeness & Physical Product Details Across Every Scene",
     summary:
-      "Teknik multi-angle seed locking dan pose sequencing agar wajah model AI dan detail produk fisik tetap identik di seluruh alur cerita video iklan.",
+      "Multi-angle seed locking and pose sequencing techniques to keep AI digital talent and physical product details identical across entire ad storylines.",
     pillars: [
       {
         heading: "Face-ID & Seed Locking",
         points: [
-          "LoRA & Facial Embeddings: Mengunci struktur wajah, warna mata, dan proporsi biologis digital talent.",
-          "Multi-Expression Mapping: Talent yang sama dapat tersenyum, berbicara, atau ekspresi terkejut di beragam scene tanpa berganti wajah.",
-          "Multi-Angle Viewpoints: Wajah tetap konsisten dari sudut tampak depan, profil samping 45°, hingga over-the-shoulder POV.",
+          "LoRA & Facial Embeddings: Locks facial bone structure, eye color, and biological proportions of digital talent.",
+          "Multi-Expression Mapping: The same talent can smile, speak, or express surprise across multiple scenes without changing faces.",
+          "Multi-Angle Viewpoints: Talent likeness remains consistent from straight-on portrait, 45° profile, to over-the-shoulder POV.",
         ],
       },
       {
-        heading: "Integritas Produk Fisik & Tipografi",
+        heading: "Physical Product & Typography Integrity",
         points: [
-          "Preservasi Proporsi Kemasan: Botol serum, sachet pupuk, atau pakaian mempertahankan rasio bentuk fisik aslinya.",
-          "Pixel-Perfect Labeling: Mencegah 'AI gibberish' pada teks kemasan dengan teknik inpainting mask & smart asset overlay.",
-          "Material & Shading Response: Refleksi botol kaca dan tekstur rajutan activewear berinteraksi realistis dengan sumber cahaya di tiap scene.",
+          "Packaging Proportion Preservation: Serum bottles, fertilizer sachets, or apparel maintain their authentic physical form factor.",
+          "Pixel-Perfect Labeling: Prevents 'AI gibberish' on packaging text using inpainting masks and smart asset overlays.",
+          "Material & Shading Response: Glass bottle reflections and activewear knit textures interact realistically with light sources in each scene.",
         ],
       },
     ],
     toolchain: ["ControlNet", "IP-Adapter", "Nano Banana", "LoRA Fine-tuning", "Photoshop Smart Objects"],
     impact:
-      "Mengeliminasi inkonsistensi yang biasa merusak kredibilitas brand. Brand Anda mendapatkan video iklan multi-scene dengan identitas visual yang solid dari detik pertama hingga akhir.",
+      "Eliminates visual inconsistencies that erode brand credibility. Provides brands with multi-scene ad campaigns with unbroken visual identity from the first second to the last.",
   },
   {
     id: "commercial-ready",
     num: "03",
     badge: "WORKFLOW PILLAR 03",
     title: "Commercial-Ready Delivery",
-    tagline: "Aset Visual Standar Industri Siap Tayang untuk Digital Ads & Marketplace",
+    tagline: "Industry-Standard Visual Assets Engineered for Digital Ads & Marketplaces",
     summary:
-      "Telah memproduksi 120+ aset visual di sektor F&B, beauty, fashion, dan e-commerce dengan standar rasio iklan digital (1:1, 9:16, 16:9).",
+      "Over 120+ commercial visual assets produced across F&B, beauty, fashion, and e-commerce with native ad ratios (1:1, 9:16, 16:9).",
     pillars: [
       {
-        heading: "Standar Multi-Platform Siap Pasang",
+        heading: "Multi-Platform Production Standards",
         points: [
-          "9:16 Vertical Video: Rasio native untuk TikTok Ads, Instagram Reels, dan YouTube Shorts tanpa cropping canggung.",
-          "1:1 Square & 4:5 Portrait: Dioptimalkan untuk Meta Feed Ads (FB/IG) dan carousel katalog Shopee/Tokopedia.",
-          "16:9 Master Landscape: Untuk etalase hero website, YouTube In-Stream, dan display monitor retail.",
+          "9:16 Vertical Video: Native aspect ratio for TikTok Ads, Instagram Reels, and YouTube Shorts without awkward cropping.",
+          "1:1 Square & 4:5 Portrait: Optimized for Meta Feed Ads (FB/IG) and Shopee/Tokopedia carousel catalogs.",
+          "16:9 Master Landscape: Engineered for website hero banners, YouTube In-Stream ads, and retail monitor displays.",
         ],
       },
       {
         heading: "Voiceover & Audio Engineering",
         points: [
-          "Generative AI Voice Cloning: Audio suara natural dengan intonasi persuasif (akses ElevenLabs).",
-          "Audio-Visual Synchronization: Pemotongan ritme video mengikuti ketukan musik komersial bebas royalti.",
-          "Subtitles & Visual Hook: Penambahan tipografi dinamis untuk mempertahankan retention rate audiens di 3 detik pertama.",
+          "Generative AI Voice Cloning: Natural human voiceover with persuasive commercial cadence and clear pacing (via ElevenLabs).",
+          "Audio-Visual Synchronization: Video cuts matched precisely to the tempo and rhythm of royalty-free commercial tracks.",
+          "Dynamic Captions & Visual Hooks: Kinetic typography and bold on-screen hooks to retain viewer drop-off in the crucial first 3 seconds.",
         ],
       },
     ],
     toolchain: ["ElevenLabs", "Google Flow / Veo", "CapCut Pro", "Premiere Pro", "After Effects"],
     impact:
-      "Waktu produksi 3-5x lebih cepat dibanding syuting konvensional, menghemat biaya operasional hingga 70% dengan kualitas visual berstandar agensi multinasional.",
+      "3-5x faster production timeline than traditional filming, cutting operational overhead by up to 70% while delivering multinational agency-grade visual quality.",
   },
 ];
 
@@ -153,7 +153,7 @@ export default function CraftCards() {
               }
             }}
             className="group relative p-6 md:p-8 rounded-2xl bg-gradient-to-b from-[#181a1f]/90 via-[#101216]/90 to-[#0b0c0e]/95 border border-white/[0.08] hover:border-[#d4af37]/60 transition-all duration-500 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)] focus:outline-none focus:ring-1 focus:ring-[#d4af37] overflow-hidden"
-            title={`Buka detail metodologi ${item.title}`}
+            title={`Open methodology details for ${item.title}`}
           >
             {/* Top edge glow sheen */}
             <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
@@ -163,7 +163,7 @@ export default function CraftCards() {
                   {item.num}
                 </span>
                 <span className="text-[10px] uppercase font-mono tracking-widest text-zinc-500 px-2 py-0.5 rounded border border-white/10 group-hover:border-[#d4af37]/40 group-hover:text-[#d4af37] transition-colors">
-                  Detail ↗
+                  Details ↗
                 </span>
               </div>
               <h4 className="text-base md:text-lg font-medium text-white mb-2.5 group-hover:text-[#d4af37] transition-colors">
@@ -176,10 +176,10 @@ export default function CraftCards() {
 
             <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs">
               <span className="text-zinc-500 group-hover:text-zinc-400 transition-colors">
-                Lihat Alur Kerja
+                View Workflow
               </span>
               <span className="text-[#d4af37] font-medium inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Pelajari Detail &rarr;
+                Explore Details &rarr;
               </span>
             </div>
           </div>
@@ -207,7 +207,7 @@ export default function CraftCards() {
                     {activeItem.badge}
                   </span>
                   <span className="text-xs text-zinc-500 font-mono">
-                    STANDAR KUALITAS
+                    QUALITY STANDARDS
                   </span>
                 </div>
                 <h3
@@ -224,7 +224,7 @@ export default function CraftCards() {
               <button
                 type="button"
                 onClick={handleClose}
-                aria-label="Tutup pop up"
+                aria-label="Close modal"
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white flex items-center justify-center text-lg transition-transform hover:scale-105 flex-shrink-0 cursor-pointer"
               >
                 ✕
@@ -282,7 +282,7 @@ export default function CraftCards() {
               {/* Real Impact */}
               <div className="p-4 rounded-xl bg-[#d4af37]/5 border border-[#d4af37]/20">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-[#d4af37] font-semibold block mb-1">
-                  Hasil Nyata untuk Brand Anda:
+                  Real Impact for Your Brand:
                 </span>
                 <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-light">
                   {activeItem.impact}
@@ -293,17 +293,17 @@ export default function CraftCards() {
             {/* Modal Footer */}
             <div className="pt-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
               <span className="text-xs text-zinc-500 font-light">
-                Tekan <kbd className="px-1.5 py-0.5 rounded bg-white/10 text-zinc-400 font-mono text-[10px]">ESC</kbd> atau klik luar untuk menutup
+                Press <kbd className="px-1.5 py-0.5 rounded bg-white/10 text-zinc-400 font-mono text-[10px]">ESC</kbd> or click outside to close
               </span>
               <a
-                href={`https://wa.me/6288299258629?text=Halo%20Andrey%20Hong,%20saya%20tertarik%20konsultasi%20mengenai%20${encodeURIComponent(
+                href={`https://wa.me/6288299258629?text=Hello%20Andrey%20Hong,%20I'm%20interested%20in%20consulting%20on%20${encodeURIComponent(
                   activeItem.title
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-5 py-2.5 rounded-full bg-white text-black hover:bg-[#d4af37] font-medium text-xs transition-colors text-center"
               >
-                Konsultasi Penerapan Ini &rarr;
+                Consult on This Workflow &rarr;
               </a>
             </div>
           </div>

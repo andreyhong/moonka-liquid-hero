@@ -77,12 +77,12 @@ export default function EcommerceAdsPage() {
       year="2026"
       title="Aussie Sawit & Howell Niaga"
       subtitle="High-impact visual assets engineered for marketplace conversion and brand authority."
-      intro="Produksi visual etalase toko online (Shopee/Tokopedia Store Decoration), creative social ads berkonversi tinggi, desain brosur produk, dan video komersial untuk sektor agrikultur perkebunan (Aussie Sawit) dan teknologi elektronik (Howell Niaga)."
+      intro="Commercial storefront visual production (Shopee & Tokopedia Store Decoration), high-converting social ads, product brochures, and commercial product video assets for agribusiness (Aussie Sawit) and consumer electronics (Howell Niaga)."
       role="E-commerce store decoration, generative AI prompting, commercial retouching, product video production"
       deliverables="Marketplace decorations, social feed ads, multi-page brochures, commercial product video"
       approachTitle="Commercial intent meets AI visual craftsmanship."
       approachSteps="Brand research → AI composition & mockup ideation → product placement retouching → multi-format asset export"
-      approachNote="Penerapan komposisi visual terstruktur dan tipografi tajam yang dirancang khusus untuk meningkatkan CTR iklan dan konversi penjualan etalase digital."
+      approachNote="Structured visual hierarchy and crisp typography engineered specifically to maximize ad CTR and digital storefront sales conversion."
       nextProject={{
         title: "Blue Sportswear (Denmark)",
         href: "/projects/blue-sportswear/",
