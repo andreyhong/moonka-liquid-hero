@@ -115,23 +115,23 @@ export default function Home() {
                     <div className="text-xs leading-relaxed">
                       <span className="text-white font-semibold">Format UGC Organik (9:16)</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Rasio vertikal full-screen dirancang untuk feed TikTok &amp; Instagram Reels Island Rituals Nail Serum.</span>
+                      <span className="text-zinc-400 font-light">Konten vertikal siap pakai untuk TikTok &amp; Reels.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="text-[#d4af37] text-[10px] mt-1 shrink-0">◆</span>
                     <div className="text-xs leading-relaxed">
-                      <span className="text-white font-semibold">Concept Prompting &amp; Avatar</span>
+                      <span className="text-white font-semibold">Concept &amp; AI Avatar</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Mentransformasi product brief menjadi video berkonversi tinggi melalui presenter digital yang natural.</span>
+                      <span className="text-zinc-400 font-light">Ubah product brief jadi video presenter natural.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="text-[#d4af37] text-[10px] mt-1 shrink-0">◆</span>
                     <div className="text-xs leading-relaxed">
-                      <span className="text-white font-semibold">Photorealistic POV Demo</span>
+                      <span className="text-white font-semibold">Photorealistic POV</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Visualisasi pemakaian produk nyata dengan gestur alami dan sinkronisasi audio presisi.</span>
+                      <span className="text-zinc-400 font-light">Demo produk realistis dengan audio presisi.</span>
                     </div>
                   </li>
                 </ul>
@@ -210,25 +210,25 @@ export default function Home() {
                   <li className="flex items-start gap-2.5">
                     <span className="text-[#d4af37] text-[10px] mt-1 shrink-0">◆</span>
                     <div className="text-xs leading-relaxed">
-                      <span className="text-white font-semibold">Etalase Marketplace High-End</span>
+                      <span className="text-white font-semibold">Etalase Toko High-End</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Desain dekorasi toko &amp; banner promosi Shopee/Tokopedia berdaya tarik visual dan konversi tinggi.</span>
+                      <span className="text-zinc-400 font-light">Dekorasi toko &amp; banner promosi Shopee &amp; Tokopedia.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="text-[#d4af37] text-[10px] mt-1 shrink-0">◆</span>
                     <div className="text-xs leading-relaxed">
-                      <span className="text-white font-semibold">Creative Ads Multi-Sektor</span>
+                      <span className="text-white font-semibold">Multi-Sector Ads</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Aset iklan komersial agrikultur perkebunan (Aussie Sawit) dan teknologi elektronik (Howell Niaga).</span>
+                      <span className="text-zinc-400 font-light">Aset iklan komersial agrikultur hingga teknologi.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="text-[#d4af37] text-[10px] mt-1 shrink-0">◆</span>
                     <div className="text-xs leading-relaxed">
-                      <span className="text-white font-semibold">AI Staging &amp; Product Mockup</span>
+                      <span className="text-white font-semibold">AI Staging &amp; Mockup</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Integrasi kemasan fisik ke dalam visual fotorealistik dengan pencahayaan komersial studio.</span>
+                      <span className="text-zinc-400 font-light">Visual produk fotorealistik dengan lighting studio.</span>
                     </div>
                   </li>
                 </ul>
@@ -307,25 +307,25 @@ export default function Home() {
                   <li className="flex items-start gap-2.5">
                     <span className="text-[#d4af37] text-[10px] mt-1 shrink-0">◆</span>
                     <div className="text-xs leading-relaxed">
-                      <span className="text-white font-semibold">Visual Lookbook &amp; Fashion Reels</span>
+                      <span className="text-white font-semibold">Lookbook &amp; Fashion Reels</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Kampanye video mode activewear &amp; knitwear untuk brand internasional Blue Sportswear (Denmark).</span>
+                      <span className="text-zinc-400 font-light">Kampanye video mode activewear brand internasional.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="text-[#d4af37] text-[10px] mt-1 shrink-0">◆</span>
                     <div className="text-xs leading-relaxed">
-                      <span className="text-white font-semibold">Konsistensi Model AI Multi-Set</span>
+                      <span className="text-white font-semibold">Konsistensi Model AI</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Menjaga wajah &amp; proporsi model identik di berbagai latar lokasi (Paris, Courchevel, Analog Nature).</span>
+                      <span className="text-zinc-400 font-light">Karakter wajah &amp; proporsi identik di multi-lokasi.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="text-[#d4af37] text-[10px] mt-1 shrink-0">◆</span>
                     <div className="text-xs leading-relaxed">
-                      <span className="text-white font-semibold">Pencahayaan Sinematik &amp; Color Grading</span>
+                      <span className="text-white font-semibold">Cinematic Lighting</span>
                       <span className="text-[#d4af37]/60 mx-1.5">—</span>
-                      <span className="text-zinc-400 font-light">Visual fotorealistik kelas editorial majalah dengan akurasi tekstur kain premium.</span>
+                      <span className="text-zinc-400 font-light">Visual kelas editorial majalah dengan tekstur kain detail.</span>
                     </div>
                   </li>
                 </ul>
