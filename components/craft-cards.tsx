@@ -110,7 +110,12 @@ const craftData: CraftItem[] = [
   },
 ];
 
-export default function CraftCards() {
+interface CraftCardsProps {
+  theme?: "dark" | "light";
+}
+
+export default function CraftCards({ theme = "dark" }: CraftCardsProps) {
+  const isDark = theme === "dark";
   const [activeItem, setActiveItem] = useState<CraftItem | null>(null);
 
   const handleClose = useCallback(() => {
@@ -152,33 +157,73 @@ export default function CraftCards() {
                 setActiveItem(item);
               }
             }}
-            className="group relative p-6 md:p-8 rounded-2xl bg-gradient-to-b from-[#181a1f]/90 via-[#101216]/90 to-[#0b0c0e]/95 border border-white/[0.08] hover:border-[#d4af37]/60 transition-all duration-500 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)] focus:outline-none focus:ring-1 focus:ring-[#d4af37] overflow-hidden"
+            className={`group relative p-6 md:p-8 rounded-2xl transition-all duration-500 hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between focus:outline-none overflow-hidden ${
+              isDark
+                ? "bg-gradient-to-b from-[#181a1f]/90 via-[#101216]/90 to-[#0b0c0e]/95 border border-white/[0.08] hover:border-[#d4af37]/60 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.12)] focus:ring-1 focus:ring-[#d4af37]"
+                : "bg-gradient-to-b from-white/95 via-[#faf9f6]/95 to-[#f3f1ec]/98 border border-black/[0.08] hover:border-[#946f12]/60 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(148,111,18,0.12)] focus:ring-1 focus:ring-[#946f12]"
+            }`}
             title={`Open methodology details for ${item.title}`}
           >
             {/* Top edge glow sheen */}
-            <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
+            <div
+              className={`absolute inset-x-0 top-0 h-[1px] pointer-events-none ${
+                isDark
+                  ? "bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  : "bg-gradient-to-r from-transparent via-black/10 to-transparent"
+              }`}
+            />
             <div>
               <div className="flex items-center justify-between mb-3 md:mb-4">
-                <span className="text-2xl md:text-3xl font-serif text-[#d4af37] font-normal block group-hover:scale-105 transition-transform">
+                <span
+                  className={`text-2xl md:text-3xl font-serif font-normal block group-hover:scale-105 transition-transform ${
+                    isDark ? "text-[#d4af37]" : "text-[#946f12]"
+                  }`}
+                >
                   {item.num}
                 </span>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-zinc-500 px-2 py-0.5 rounded border border-white/10 group-hover:border-[#d4af37]/40 group-hover:text-[#d4af37] transition-colors">
+                <span
+                  className={`text-[10px] uppercase font-mono tracking-widest px-2 py-0.5 rounded border transition-colors ${
+                    isDark
+                      ? "border-white/10 text-zinc-500 group-hover:border-[#d4af37]/40 group-hover:text-[#d4af37]"
+                      : "border-black/10 text-zinc-600 group-hover:border-[#946f12]/40 group-hover:text-[#946f12]"
+                  }`}
+                >
                   Details ↗
                 </span>
               </div>
-              <h4 className="text-base md:text-lg font-medium text-white mb-2.5 group-hover:text-[#d4af37] transition-colors">
+              <h4
+                className={`text-base md:text-lg font-medium mb-2.5 transition-colors ${
+                  isDark ? "text-white group-hover:text-[#d4af37]" : "text-[#151514] group-hover:text-[#946f12]"
+                }`}
+              >
                 {item.title}
               </h4>
-              <p className="text-xs md:text-sm text-zinc-400 leading-relaxed font-light">
+              <p
+                className={`text-xs md:text-sm leading-relaxed font-light ${
+                  isDark ? "text-zinc-400" : "text-zinc-600"
+                }`}
+              >
                 {item.summary}
               </p>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs">
-              <span className="text-zinc-500 group-hover:text-zinc-400 transition-colors">
+            <div
+              className={`mt-6 pt-4 border-t flex items-center justify-between text-xs ${
+                isDark ? "border-white/5" : "border-black/5"
+              }`}
+            >
+              <span
+                className={`transition-colors ${
+                  isDark ? "text-zinc-500 group-hover:text-zinc-400" : "text-zinc-500 group-hover:text-zinc-800"
+                }`}
+              >
                 View Workflow
               </span>
-              <span className="text-[#d4af37] font-medium inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span
+                className={`font-medium inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform ${
+                  isDark ? "text-[#d4af37]" : "text-[#946f12]"
+                }`}
+              >
                 Explore Details &rarr;
               </span>
             </div>
@@ -189,21 +234,37 @@ export default function CraftCards() {
       {/* Pop-up Modal */}
       {activeItem && (
         <div
-          className="fixed inset-0 z-[99999] flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md animate-in fade-in duration-200"
+          className={`fixed inset-0 z-[99999] flex items-center justify-center p-4 sm:p-6 backdrop-blur-md animate-in fade-in duration-200 ${
+            isDark ? "bg-black/85" : "bg-black/60"
+          }`}
           onClick={handleClose}
           role="dialog"
           aria-modal="true"
           aria-labelledby="craft-modal-title"
         >
           <div
-            className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#141517] border border-[#d4af37]/40 p-6 sm:p-8 text-[#F1EFEA] shadow-[0_24px_80px_rgba(0,0,0,0.9)] animate-in zoom-in-95 duration-200"
+            className={`relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl p-6 sm:p-8 animate-in zoom-in-95 duration-200 ${
+              isDark
+                ? "bg-[#141517] border border-[#d4af37]/40 text-[#F1EFEA] shadow-[0_24px_80px_rgba(0,0,0,0.9)]"
+                : "bg-[#F8F7F4] border border-[#946f12]/40 text-[#151514] shadow-[0_24px_80px_rgba(0,0,0,0.25)]"
+            }`}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="flex items-start justify-between pb-5 border-b border-white/10 gap-4">
+            <div
+              className={`flex items-start justify-between pb-5 border-b gap-4 ${
+                isDark ? "border-white/10" : "border-black/10"
+              }`}
+            >
               <div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-mono font-bold tracking-widest text-[#d4af37] uppercase bg-[#d4af37]/10 px-2.5 py-0.5 rounded border border-[#d4af37]/30">
+                  <span
+                    className={`text-xs font-mono font-bold tracking-widest uppercase px-2.5 py-0.5 rounded border ${
+                      isDark
+                        ? "text-[#d4af37] bg-[#d4af37]/10 border-[#d4af37]/30"
+                        : "text-[#8a660d] bg-[#946f12]/10 border-[#946f12]/30"
+                    }`}
+                  >
                     {activeItem.badge}
                   </span>
                   <span className="text-xs text-zinc-500 font-mono">
@@ -212,11 +273,17 @@ export default function CraftCards() {
                 </div>
                 <h3
                   id="craft-modal-title"
-                  className="text-2xl sm:text-3xl font-serif text-white tracking-tight"
+                  className={`text-2xl sm:text-3xl font-serif tracking-tight ${
+                    isDark ? "text-white" : "text-[#151514]"
+                  }`}
                 >
                   {activeItem.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#e6d5b8] font-light mt-1">
+                <p
+                  className={`text-xs sm:text-sm font-light mt-1 ${
+                    isDark ? "text-[#e6d5b8]" : "text-[#8a660d]"
+                  }`}
+                >
                   {activeItem.tagline}
                 </p>
               </div>
@@ -225,7 +292,11 @@ export default function CraftCards() {
                 type="button"
                 onClick={handleClose}
                 aria-label="Close modal"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white flex items-center justify-center text-lg transition-transform hover:scale-105 flex-shrink-0 cursor-pointer"
+                className={`w-9 h-9 rounded-full flex items-center justify-center text-lg transition-transform hover:scale-105 flex-shrink-0 cursor-pointer ${
+                  isDark
+                    ? "bg-white/10 hover:bg-white/20 border border-white/20 text-white"
+                    : "bg-black/5 hover:bg-black/10 border border-black/15 text-zinc-900"
+                }`}
               >
                 ✕
               </button>
@@ -234,8 +305,12 @@ export default function CraftCards() {
             {/* Modal Body */}
             <div className="py-6 space-y-6">
               {/* Overview */}
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <p className="text-sm text-zinc-300 leading-relaxed font-light">
+              <div
+                className={`p-4 rounded-xl border ${
+                  isDark ? "bg-white/[0.02] border-white/5 text-zinc-300" : "bg-white/80 border-black/5 text-zinc-700"
+                }`}
+              >
+                <p className="text-sm leading-relaxed font-light">
                   {activeItem.summary}
                 </p>
               </div>
@@ -244,14 +319,30 @@ export default function CraftCards() {
               <div className="space-y-5">
                 {activeItem.pillars.map((pillar, idx) => (
                   <div key={idx} className="space-y-2.5">
-                    <h5 className="text-sm font-semibold tracking-wide text-white uppercase flex items-center gap-2 font-mono">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]"></span>
+                    <h5
+                      className={`text-sm font-semibold tracking-wide uppercase flex items-center gap-2 font-mono ${
+                        isDark ? "text-white" : "text-[#151514]"
+                      }`}
+                    >
+                      <span
+                        className={`w-1.5 h-1.5 rounded-full ${
+                          isDark ? "bg-[#d4af37]" : "bg-[#946f12]"
+                        }`}
+                      ></span>
                       {pillar.heading}
                     </h5>
-                    <ul className="space-y-2 text-xs sm:text-sm text-zinc-300 font-light leading-relaxed pl-3.5 border-l border-white/10">
+                    <ul
+                      className={`space-y-2 text-xs sm:text-sm font-light leading-relaxed pl-3.5 border-l ${
+                        isDark ? "text-zinc-300 border-white/10" : "text-zinc-700 border-black/10"
+                      }`}
+                    >
                       {pillar.points.map((pt, pIdx) => (
                         <li key={pIdx} className="flex items-start gap-2">
-                          <span className="text-[#d4af37] text-[10px] mt-1 flex-shrink-0">
+                          <span
+                            className={`text-[10px] mt-1 flex-shrink-0 ${
+                              isDark ? "text-[#d4af37]" : "text-[#946f12]"
+                            }`}
+                          >
                             ◆
                           </span>
                           <span>{pt}</span>
@@ -264,14 +355,22 @@ export default function CraftCards() {
 
               {/* Toolchain */}
               <div>
-                <h5 className="text-xs uppercase font-mono tracking-widest text-zinc-400 mb-2.5">
+                <h5
+                  className={`text-xs uppercase font-mono tracking-widest mb-2.5 ${
+                    isDark ? "text-zinc-400" : "text-zinc-600"
+                  }`}
+                >
                   Software &amp; Generative AI Stack:
                 </h5>
                 <div className="flex flex-wrap gap-2">
                   {activeItem.toolchain.map((tool, tIdx) => (
                     <span
                       key={tIdx}
-                      className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-200 font-mono"
+                      className={`text-xs px-3 py-1 rounded-full font-mono border ${
+                        isDark
+                          ? "bg-white/5 border-white/10 text-zinc-200"
+                          : "bg-white border-black/10 text-zinc-800 shadow-xs"
+                      }`}
                     >
                       {tool}
                     </span>
@@ -280,20 +379,42 @@ export default function CraftCards() {
               </div>
 
               {/* Real Impact */}
-              <div className="p-4 rounded-xl bg-[#d4af37]/5 border border-[#d4af37]/20">
-                <span className="text-[11px] font-mono uppercase tracking-wider text-[#d4af37] font-semibold block mb-1">
+              <div
+                className={`p-4 rounded-xl border ${
+                  isDark
+                    ? "bg-[#d4af37]/5 border-[#d4af37]/20 text-zinc-300"
+                    : "bg-[#946f12]/10 border-[#946f12]/25 text-zinc-800"
+                }`}
+              >
+                <span
+                  className={`text-[11px] font-mono uppercase tracking-wider font-semibold block mb-1 ${
+                    isDark ? "text-[#d4af37]" : "text-[#8a660d]"
+                  }`}
+                >
                   Real Impact for Your Brand:
                 </span>
-                <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-light">
+                <p className="text-xs sm:text-sm leading-relaxed font-light">
                   {activeItem.impact}
                 </p>
               </div>
             </div>
 
             {/* Modal Footer */}
-            <div className="pt-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div
+              className={`pt-5 border-t flex flex-col sm:flex-row items-center justify-between gap-3 ${
+                isDark ? "border-white/10" : "border-black/10"
+              }`}
+            >
               <span className="text-xs text-zinc-500 font-light">
-                Press <kbd className="px-1.5 py-0.5 rounded bg-white/10 text-zinc-400 font-mono text-[10px]">ESC</kbd> or click outside to close
+                Press{" "}
+                <kbd
+                  className={`px-1.5 py-0.5 rounded font-mono text-[10px] ${
+                    isDark ? "bg-white/10 text-zinc-400" : "bg-black/5 text-zinc-600 border border-black/10"
+                  }`}
+                >
+                  ESC
+                </kbd>{" "}
+                or click outside to close
               </span>
               <a
                 href={`https://wa.me/6288299258629?text=Hello%20Andrey%20Hong,%20I'm%20interested%20in%20consulting%20on%20${encodeURIComponent(
@@ -301,7 +422,11 @@ export default function CraftCards() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-5 py-2.5 rounded-full bg-white text-black hover:bg-[#d4af37] font-medium text-xs transition-colors text-center"
+                className={`w-full sm:w-auto px-5 py-2.5 rounded-full font-medium text-xs transition-colors text-center ${
+                  isDark
+                    ? "bg-white text-black hover:bg-[#d4af37]"
+                    : "bg-[#151514] text-white hover:bg-[#946f12] shadow-sm"
+                }`}
               >
                 Consult on This Workflow &rarr;
               </a>

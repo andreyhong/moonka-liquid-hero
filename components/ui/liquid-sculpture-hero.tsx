@@ -1051,8 +1051,10 @@ export interface SculptureHeroProps {
   background?: string
   /** Dark-theme background. */
   darkBackground?: string
-  /** Theme on load. */
+  /** Theme on load or controlled theme. */
   theme?: "light" | "dark"
+  /** Callback when user clicks the light/dark theme switch. */
+  onThemeChange?: (theme: "light" | "dark") => void
   /** Show the light/dark switch in the nav. */
   themeToggle?: boolean
   textColor?: string
@@ -1414,7 +1416,8 @@ export default function SculptureHero(props: SculptureHeroProps) {
     hintTouch = DEFAULTS.hintTouch,
     background: lightBackground = DEFAULTS.background,
     darkBackground = DEFAULTS.darkBackground,
-    theme = "light",
+    theme,
+    onThemeChange,
     themeToggle = true,
     textColor,
     accentColor,
@@ -1479,8 +1482,18 @@ export default function SculptureHero(props: SculptureHeroProps) {
     y: sculptureY,
   }
 
-  const [mode, setMode] = React.useState<"light" | "dark">(theme)
-  React.useEffect(() => setMode(theme), [theme])
+  const [internalMode, setInternalMode] = React.useState<"light" | "dark">(theme || "light")
+  React.useEffect(() => {
+    if (theme) setInternalMode(theme)
+  }, [theme])
+  const mode = theme || internalMode
+
+  const handleToggleTheme = () => {
+    const next = mode === "dark" ? "light" : "dark"
+    setInternalMode(next)
+    onThemeChange?.(next)
+  }
+
   const background = mode === "dark" ? darkBackground : lightBackground
   const bgRgb = React.useMemo(() => hexToRgb(background, [0.92, 0.91, 0.9]), [background])
   // text follows the background unless set: light on dark grounds, dark on light ones
@@ -1761,7 +1774,7 @@ export default function SculptureHero(props: SculptureHeroProps) {
                   type="button"
                   className="sh-theme"
                   aria-label={mode === "dark" ? "Switch to light theme" : "Switch to dark theme"}
-                  onClick={() => setMode((m) => (m === "dark" ? "light" : "dark"))}
+                  onClick={handleToggleTheme}
                 >
                   {mode === "dark" ? <SunIcon /> : <MoonIcon />}
                 </button>
@@ -1860,7 +1873,7 @@ export default function SculptureHero(props: SculptureHeroProps) {
                   type="button"
                   className="sh-theme"
                   aria-label={mode === "dark" ? "Switch to light theme" : "Switch to dark theme"}
-                  onClick={() => setMode((m) => (m === "dark" ? "light" : "dark"))}
+                  onClick={handleToggleTheme}
                 >
                   {mode === "dark" ? <SunIcon /> : <MoonIcon />}
                 </button>
